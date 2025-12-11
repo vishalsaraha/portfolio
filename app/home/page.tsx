@@ -1,23 +1,33 @@
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import Navbar from '../components/nav';
+import Typography from '@mui/material/Typography';
 
 
 export default function BasicGrid() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid size={4}>
+    //blue secondory colour #0066FF
+    //and white and grey
+    <div>
+    <Box>
+    
+    <Navbar/>
+    </Box>
+    <Box sx={{ flexGrow: 1,
+      marginTop: 15,
+     }}>
+      <Grid container spacing={2}
+      sx={{
+         border: 2,
+      borderColor: "#0066FF",
+      }}
+      >
+          <Grid size={6}>
           <Box sx={{
-            backgroundColor: 'black',
-           
-          }}>
-          </Box>
-        </Grid>
-        <Grid size={6}>
-          <Box sx={{
-            alignItems: "right"
+            alignItems: "right",
+              borderRight: 2,
+             borderColor: "#0066FF",
           }}>
             <Image 
               src="/images/typewriter.png" 
@@ -28,10 +38,17 @@ export default function BasicGrid() {
             />
           </Box>
         </Grid>
-        <Grid size={2}>
-          {/* Empty Grid for layout */}
+        <Grid size={4}
+        sx={{}}
+        >
+          <Typography>Vishal Muthappa</Typography>
         </Grid>
+        <Grid>
+          <audio src=""></audio>
+        </Grid>
+       
       </Grid>
     </Box>
+    </div>
   );
 }
