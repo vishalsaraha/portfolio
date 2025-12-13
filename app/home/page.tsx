@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Navbar from '../components/nav';
+
 import Socials from '../components/socials';
 import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
@@ -56,6 +57,21 @@ export default function BasicGrid() {
               alignItems: 'center',
             }} 
           />
+               
+        {/* <Box
+            sx={{
+              position: "absolute",
+              top: "20%", // adjust vertical position
+              left: "50%", // horizontal center
+              transform: "translate(-50%, -50%)",
+              width: { xs: "15%", sm: "18%", md: "20%" }, // smaller width for responsive design
+              textAlign: "center",
+              pointerEvents: "none", // text won’t block clicks
+            }}
+          >
+            <Typewriter fontSize={{ xs: 4, sm: 6, md: 8 }} /> 
+          </Box> */}
+
           
           
           {/* The Video is the overlay layer */}

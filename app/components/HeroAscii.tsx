@@ -61,7 +61,8 @@ export default function HeroAscii() {
                 >
                 <Image
                     src="/images/home.png"
-                    alt="Picture of the author"
+                    alt="Web developer's name with some effect"
+                     draggable={false}
                     width={500}
                     height={500}
                     style={{ position: "relative", zIndex: 1 }}
