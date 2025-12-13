@@ -1,3 +1,4 @@
+"use client";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
@@ -47,17 +48,17 @@ export default function Socials(){
                  {/* NESTED GRID for the four social icons (4 columns, 12 units total) */}
           <Grid container spacing={0}>
             
-            {/* Social Icon 1 (X) */}
+            
             <Grid 
               size={{ xs: 3 }}
-              sx={{ borderRight: 2, borderColor: "#0066FF", display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60px' }}
+              sx={{ borderRight: 2, borderColor: "#0066FF", display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             >
-             <StyledGridItem size={{ xs: 3 }} hasBorderRight={true}>
+             <StyledGridItem >
               <Box className="social-icon-box"><XIcon /></Box>
             </StyledGridItem>
             </Grid>
             
-            {/* Social Icon 2 (Dribbble/Wheel) */}
+            
             <Grid 
               size={{ xs: 3 }}
               sx={{ borderRight: 2, borderColor: "#0066FF", display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60px' }}
@@ -66,7 +67,7 @@ export default function Socials(){
               <Box sx={{ color: '#0066FF', fontSize: '30px', fontWeight: 'bold' }} className="social-icon-box"><LinkedInIcon/></Box> {/* Placeholder */}
             </Grid>
             
-            {/* Social Icon 3 (Instagram) */}
+           
             <Grid 
              size={{ xs: 3 }}
               sx={{ borderRight: 2, borderColor: "#0066FF", display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60px' }}
@@ -75,7 +76,7 @@ export default function Socials(){
               <Box sx={{ color: '#0066FF', fontSize: '30px', fontWeight: 'bold' }} className="social-icon-box"><GitHubIcon /></Box> {/* Placeholder */}
             </Grid>
             
-            {/* Social Icon 4 (LinkedIn) */}
+           
             <Grid 
              size={{ xs: 3 }}
               sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60px' }}
