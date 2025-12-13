@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Press_Start_2P } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-export const pressStart2P = Press_Start_2P({ 
-  subsets: ['latin'],
-  weight: '400', // Press Start 2P typically only has a 400 weight
-});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

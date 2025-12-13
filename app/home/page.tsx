@@ -5,7 +5,6 @@ import Navbar from '../components/nav';
 import Socials from '../components/socials';
 import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
-import { pressStart2P } from '../layout';
 import Link from 'next/link';
 
 export default function BasicGrid() {
@@ -45,6 +44,7 @@ export default function BasicGrid() {
             borderColor: "#0066FF",
           }}
         >
+
           {/* The Image acts as the background/base layer */}
           <Image 
             src="/images/typewriter.png" 
@@ -52,11 +52,11 @@ export default function BasicGrid() {
             width={600}
             height={600} 
             draggable={false}
-            // Ensure the image behaves like a block element
             style={{ display: 'block',
               alignItems: 'center',
             }} 
           />
+          
           
           {/* The Video is the overlay layer */}
           <video 
@@ -82,15 +82,8 @@ export default function BasicGrid() {
       </Grid>
         
               <Grid size={8}>
-                  <Typography 
-                    className={pressStart2P.className} 
-                    sx={{ 
-                      // This line is crucial for overriding MUI's default font.
-                      fontFamily: 'Press Start 2P, cursive', 
-                    }}
-                  >
+                 
                   <HeroAscii />
-                  </Typography>
                 </Grid>
                           
               <Grid>
@@ -112,7 +105,7 @@ export default function BasicGrid() {
           borderColor: "#0066FF",
           minHeight: '400px',
           '& > .MuiGrid-item': {
-             padding: '20px',
+             padding: '10px',
           }
         }}
       >

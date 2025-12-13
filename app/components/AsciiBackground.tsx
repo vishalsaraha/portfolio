@@ -9,7 +9,7 @@ export default function AsciiBackground() {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
 
-    const chars = ["8", "|", ".", ":"];
+    const chars = ["0", "1", ".", ":"];
     const stepX = 10;
     const stepY = 14;
 

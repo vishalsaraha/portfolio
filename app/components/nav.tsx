@@ -6,10 +6,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Skills', href: '#' },
+  { name: 'Experience', href: '#' },
+  { name: 'Projects', href: '#' },
+  { name: 'Connect', href: '#' },
 ]
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <header className="absolute inset-x-0 z-50 top-0 border-2 backdrop-blur-2xl">
+      <header className="absolute inset-x-0 z-50 top-0 backdrop-blur-2xl">
         <nav aria-label="Global" className="flex items-center justify-between p-2 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
