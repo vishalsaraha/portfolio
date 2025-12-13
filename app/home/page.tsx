@@ -2,7 +2,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Navbar from '../components/nav';
-import Socials from '../components/socials'
+import Socials from '../components/socials';
+import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import { pressStart2P } from '../layout';
 import Link from 'next/link';
@@ -14,14 +15,13 @@ export default function BasicGrid() {
     <div>
     <Box 
       sx={{
-        position: 'fixed', // Fixes it relative to the viewport
+        position: 'fixed', 
         top: 0,
         left: 0,
-        right: 0, // Makes sure it stretches across the entire width
+        right: 0, 
         zIndex: 1000,
-        // Add background and border here to match your design
         backgroundColor: 'white', 
-        borderBottom: 2, // Use borderBottom for a clean separation line
+        borderBottom: 2,
         borderColor: "#0066FF",
       }}
     >
@@ -81,7 +81,7 @@ export default function BasicGrid() {
         </Box>
       </Grid>
         
-              <Grid size={6}>
+              <Grid size={8}>
                   <Typography 
                     className={pressStart2P.className} 
                     sx={{ 
@@ -89,12 +89,12 @@ export default function BasicGrid() {
                       fontFamily: 'Press Start 2P, cursive', 
                     }}
                   >
-                    Vishal Muthappa
+                  <HeroAscii />
                   </Typography>
                 </Grid>
                           
               <Grid>
-                <audio src=""></audio>
+                {/* <audio src=""></audio> */}
               </Grid>
             
             </Grid>
