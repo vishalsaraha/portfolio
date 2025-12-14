@@ -65,7 +65,8 @@ export default function HeroAscii() {
                      draggable={false}
                     width={500}
                     height={500}
-                    style={{ position: "relative", zIndex: 1 }}
+                    style={{ position: "relative", zIndex: 1
+                     }}
                 />
                 
                 </Box>

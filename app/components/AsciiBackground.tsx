@@ -45,7 +45,7 @@ export default function AsciiBackground() {
     resize();
     window.addEventListener("resize", resize);
 
-    const interval = setInterval(draw, 1800);
+    const interval = setInterval(draw, 1600);
     return () => {
       window.removeEventListener("resize", resize);
       clearInterval(interval);

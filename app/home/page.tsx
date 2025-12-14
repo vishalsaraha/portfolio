@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Navbar from '../components/nav';
-
+import AsciiArt from '../components/Asciiart';
 import Socials from '../components/socials';
 import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
@@ -45,55 +45,7 @@ export default function BasicGrid() {
             borderColor: "#0066FF",
           }}
         >
-
-          {/* The Image acts as the background/base layer */}
-          <Image 
-            src="/images/typewriter.png" 
-            alt="type writer image" 
-            width={600}
-            height={600} 
-            draggable={false}
-            style={{ display: 'block',
-              alignItems: 'center',
-            }} 
-          />
-               
-        {/* <Box
-            sx={{
-              position: "absolute",
-              top: "20%", // adjust vertical position
-              left: "50%", // horizontal center
-              transform: "translate(-50%, -50%)",
-              width: { xs: "15%", sm: "18%", md: "20%" }, // smaller width for responsive design
-              textAlign: "center",
-              pointerEvents: "none", // text won’t block clicks
-            }}
-          >
-            <Typewriter fontSize={{ xs: 4, sm: 6, md: 8 }} /> 
-          </Box> */}
-
-          
-          
-          {/* The Video is the overlay layer */}
-          <video 
-            src="/videos/grid.mp4" 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-           
-            style={{
-             position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              zIndex: -10,
-            }}
-          >
-            Your browser does not support the video tag.
-          </video>
+            <AsciiArt/>
         </Box>
       </Grid>
         
@@ -134,14 +86,19 @@ export default function BasicGrid() {
             borderColor: "#0066FF",
           }}
         >
-          <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-            Kus © 2025
+          <Typography variant="body1" sx={{ fontWeight: 'bold', p: 2, }}>
+           Vishaluthappa © 2025
           </Typography>
-          <Typography variant="body2" sx={{ my: 2 }}>
-            Working with brands ready to break the mould.
+          <Typography variant="body2" sx={{  p: 2, }}>
+            A front-end developer and UI/UX specialist with a Masters in Computer Applications, I am passionate about
+crafting seamless digital experiences. My expertise in Next.js, MUI, and Shopify allows me to develop
+responsive web applications and high-performing eCommerce websites. In my recent work on the PNG
+National Examination Results website, I leveraged these technologies to improve site performance and
+enhance user experience across devices. I am committed to creating user-centric designs that drive
+engagement and satisfaction.
           </Typography>
           
-          <Box sx={{ mt: 5 }}>
+          <Box sx={{ p: 2, }}>
             <Link href="mailto:mike@mikekus.com" color="inherit">
               {/* This contact is moved to the footer row for accuracy, leaving a plus sign placeholder */}
               <Typography variant="h4" sx={{ color: '#0066FF', lineHeight: 1 }}>+</Typography>
@@ -214,8 +171,8 @@ export default function BasicGrid() {
             padding: '0 20px',
           }}
         >
-          <Link href="mailto:mike@mikekus.com" color="inherit">
-            mike@mikekus.com
+          <Link href="vishalmuthappa45@gmail.com" color="inherit">
+            vishalmuthappa45@gmail.com
           </Link>
         </Grid>
 
@@ -231,7 +188,7 @@ export default function BasicGrid() {
           }}
         >
           <Typography variant="body2" sx={{ color: '#0066FF' }}>
-            → Brand / Web / Creative
+           Logo
           </Typography>
         </Grid>
 
