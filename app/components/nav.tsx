@@ -21,7 +21,7 @@ export default function Navbar() {
         <nav aria-label="Global" className="flex items-center justify-between p-2 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              
                 <Image
                     src="/images/vishal.png"
                     alt="Logo"
@@ -39,18 +39,44 @@ export default function Navbar() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-black">
-                {item.name}
+                   <div className="hidden lg:flex lg:gap-x-4">
+                        {navigation.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className="
+                              px-4 py-2
+                              bg-white
+                              text-[#0066FF] font-semibold text-sm
+                              transition-colors duration-300 ease-in-out
+                              hover:bg-[#0066FF]
+                              hover:text-white
+                            "
+                          >
+                            {item.name}
+                          </a>
+                        ))}
+                      </div>
+
+
+
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+              <a
+                href="https://www.linkedin.com/in/vishal-muthappa/"
+                className="
+                  px-4 py-2
+                  bg-white
+                  text-[#0066FF]
+                  font-semibold text-sm
+                  transition-colors duration-300 ease-in-out
+                  hover:bg-[#0066FF]
+                  hover:text-white
+                "
+              >
+                Linkedin <span aria-hidden="true">&rarr;</span>
               </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#https://www.linkedin.com/in/vishal-muthappa/" className="text-sm/6 font-semibold text-black">
-              Linkedin <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+            </div>
+
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />

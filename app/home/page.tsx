@@ -87,19 +87,19 @@ export default function BasicGrid() {
           }}
         >
           <Typography variant="body1" sx={{ fontWeight: 'bold', p: 2, }}>
-           Vishaluthappa © 2025
+           Vishal Muthappa MCA.,
           </Typography>
-          <Typography variant="body2" sx={{  p: 2, }}>
+          <Typography variant="body2" sx={{  p: 1, }}>
             A front-end developer and UI/UX specialist with a Masters in Computer Applications, I am passionate about
-crafting seamless digital experiences. My expertise in Next.js, MUI, and Shopify allows me to develop
-responsive web applications and high-performing eCommerce websites. In my recent work on the PNG
-National Examination Results website, I leveraged these technologies to improve site performance and
-enhance user experience across devices. I am committed to creating user-centric designs that drive
-engagement and satisfaction.
+            crafting seamless digital experiences. My expertise in Next.js, MUI, and Shopify allows me to develop
+            responsive web applications and high-performing eCommerce websites. In my recent work on the PNG
+            National Examination Results website, I leveraged these technologies to improve site performance and
+            enhance user experience across devices. I am committed to creating user-centric designs that drive
+            engagement and satisfaction.
           </Typography>
           
           <Box sx={{ p: 2, }}>
-            <Link href="mailto:mike@mikekus.com" color="inherit">
+            <Link href="vishalmuthappa45@gmail.com" color="inherit">
               {/* This contact is moved to the footer row for accuracy, leaving a plus sign placeholder */}
               <Typography variant="h4" sx={{ color: '#0066FF', lineHeight: 1 }}>+</Typography>
             </Link>
@@ -171,9 +171,10 @@ engagement and satisfaction.
             padding: '0 20px',
           }}
         >
-          <Link href="vishalmuthappa45@gmail.com" color="inherit">
-            vishalmuthappa45@gmail.com
-          </Link>
+           <Link href="vishalmuthappa45@gmail.com" color="inherit">
+              {/* This contact is moved to the footer row for accuracy, leaving a plus sign placeholder */}
+              <Typography variant="h4" sx={{ color: '#0066FF', lineHeight: 1 }}>vishalmuthappa45@gmail.com</Typography>
+            </Link>
         </Grid>
 
         {/* FOOTER COLUMN 2: Descriptor Text */}
