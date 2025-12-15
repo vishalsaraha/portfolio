@@ -8,10 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-const primaryColor = "#0066FF";
-const hoverColor = primaryColor;
-const iconColor = primaryColor;
-const hoverIconColor = "white"; 
+
 
 // 1. Create a styled Grid component
 const StyledGridItem = styled(Grid)(() => ({
@@ -53,6 +50,7 @@ export default function Socials(){
                 <StyledGridItem>
                   <Box className="social-icon-box">
                     <XIcon />
+                    
                   </Box>
                 </StyledGridItem>
               </Grid>

@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <div>
       <header className="absolute inset-x-0 z-50 top-0 backdrop-blur-2xl">
-        <nav aria-label="Global" className="flex items-center justify-between p-2 lg:px-8">
+        <nav aria-label="Global" className="flex items-center justify-between border-2 border-primary p-2 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               
@@ -47,9 +47,9 @@ export default function Navbar() {
                             className="
                               px-4 py-2
                               bg-white
-                              text-[#0066FF] font-semibold text-sm
+                              text-primary font-semibold text-sm
                               transition-colors duration-300 ease-in-out
-                              hover:bg-[#0066FF]
+                              hover:bg-primary
                               hover:text-white
                             "
                           >
@@ -63,13 +63,14 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
               <a
                 href="https://www.linkedin.com/in/vishal-muthappa/"
+                  target="_blank"
                 className="
                   px-4 py-2
                   bg-white
-                  text-[#0066FF]
+                  text-primary
                   font-semibold text-sm
                   transition-colors duration-300 ease-in-out
-                  hover:bg-[#0066FF]
+                  hover:bg-primary
                   hover:text-white
                 "
               >
