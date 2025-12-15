@@ -27,13 +27,17 @@ export default function BasicGrid() {
     >
   <Navbar/>
 </Box>
-    <Box sx={{ flexGrow: 1,
-      marginTop: 15,
-     }}>
-      <Grid container spacing={2}
+    <Box  sx={{
+    flexGrow: 1,
+    mt: 15,
+   
+      }}>
+      <Grid container spacing={0}
       sx={{
          border: 2,
-      borderColor: "#0066FF",
+          borderColor: "#0066FF",
+          minHeight: '70vh',
+          alignItems: 'stretch',
       }}
       >
       
@@ -117,7 +121,9 @@ export default function BasicGrid() {
           <Typography variant="h6" sx={{ mb: 1, textDecoration: 'underline' }}>
             Website
           </Typography>
-          <Link href="#" display="block" color="inherit" underline="none">WORK →</Link>
+           <Link href="/dashboard" scroll={false}>
+              Dashboard
+            </Link>
           <Link href="#" display="block" color="inherit" underline="none">ABOUT →</Link>
           <Link href="#" display="block" color="inherit" underline="none">CONTACT →</Link>
 
@@ -173,7 +179,7 @@ export default function BasicGrid() {
         >
            <Link href="vishalmuthappa45@gmail.com" color="inherit">
               {/* This contact is moved to the footer row for accuracy, leaving a plus sign placeholder */}
-              <Typography variant="h4" sx={{ color: '#0066FF', lineHeight: 1 }}>vishalmuthappa45@gmail.com</Typography>
+              <Typography variant="body1" sx={{ color: '#0066FF', lineHeight: 1 }}>vishalmuthappa45@gmail.com</Typography>
             </Link>
         </Grid>
 

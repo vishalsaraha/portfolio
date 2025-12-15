@@ -74,7 +74,6 @@ export default function HeroAscii() {
           sx={{
             maxWidth: 420,
             opacity: 0.75,
-            mb: 3,
             fontSize: 14,
           }}
         >

@@ -77,10 +77,15 @@ export default function AsciiArt() {
           backgroundColor: "#F8FAFF",
         color: "#0066FF",
         overflow: "hidden",
+        
       }}
     >
-      <Typography sx={{ mt: 2, opacity: 0.6, letterSpacing: 2,  fontSize: "10px", }}>
-        GIRL WITH A PEARL EARRING — ASCII BY Johannes Vermeer
+      
+      <Typography sx={{ mt: 2, opacity: 0.6, letterSpacing: 2,  fontSize: "10px", p: 1,}}>
+        GIRL WITH A PEARL EARRING — BY Johannes Vermeer 
+      </Typography>
+       <Typography sx={{ mt: 2, opacity: 0.6, fontSize: "10px", paddingLeft: 1,}}>
+          ASCII ART BY VM
       </Typography>
 
       <pre
