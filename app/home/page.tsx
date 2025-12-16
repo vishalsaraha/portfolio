@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Navbar from '../components/nav';
+import Midcall from '../components/typewriter';
 import AsciiArt from '../components/Asciiart';
 import Socials from '../components/socials';
 import HeroAscii from "../components/HeroAscii";
@@ -67,34 +68,45 @@ export default function BasicGrid() {
             
             </Grid>
           </Box>
-          <Box>
-              <Grid>
-                
-              </Grid>
-            
-          </Box>
+        <Box>
+
+            {/* midcall component */}
+
+        <Grid 
+          container 
+          spacing={0} 
+          sx={{
+            borderRight: 2,
+            borderLeft: 2,
+            borderBottom: 2,
+            borderColor: "#0066FF",
+            minHeight: '200px',
+            maxHeight: '300px',
+          }}
+        >
+  
+          <Grid 
+           size={{xs: 12}} 
+            sx={{ 
+             
+                width: '100%',
+                height: '100%',
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                p: 0,
+            }}
+          >
+             <Box sx={{ width: '100%', height: '100%' }}>
+                <Midcall/>
+             </Box>
+          </Grid>
+        </Grid>
+      </Box>
+
 
     <Box>
-
-       <Grid 
-        container 
-        spacing={0}
-        sx={{
-          borderRight: 2,
-          borderLeft: 2,
-           borderBottom: 2,
-          borderColor: "#0066FF",
-          minHeight: '400px',
-          '& > .MuiGrid-item': {
-             padding: '10px',
-          }
-        }}
-      >
-         
-      </Grid>
-      
-    
-      <Grid 
+     <Grid 
         container 
         spacing={0}
         sx={{
@@ -108,7 +120,7 @@ export default function BasicGrid() {
         }}
       >
         
-        {/* === COLUMN 1 (5/12) === */}
+        {/* === COLUMN 1 (6/12) === */}
         <Grid
             size={{ xs: 6 }}
             sx={{
@@ -116,6 +128,7 @@ export default function BasicGrid() {
               borderRight: 2,
               borderColor: "#0066FF",
               color: "#0066FF",
+         
             }}
           >
             {/* TOP LEFT */}
@@ -204,7 +217,7 @@ export default function BasicGrid() {
 
 
         
-        {/* === COLUMN 2 (4/12) === */}
+        {/* === COLUMN 2 (6/12) === */}
         <Grid 
            size={{xs: 6}} 
           sx={{
@@ -218,7 +231,7 @@ export default function BasicGrid() {
            <Link href="/dashboard" scroll={false}>
               Dashboard
             </Link>
-          <Link href="#" display="block" color="inherit" underline="none">ABOUT →</Link>
+          <Link href="#" color="inherit" >ABOUT →</Link>
           <Link href="#" display="block" color="inherit" underline="none">CONTACT →</Link>
 
           <Typography variant="h6" sx={{ mt: 3, mb: 1, textDecoration: 'underline' }}>
