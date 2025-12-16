@@ -8,6 +8,9 @@ import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 
+
+
+
 export default function BasicGrid() {
   return (
     //blue secondory colour #0066FF
@@ -25,8 +28,8 @@ export default function BasicGrid() {
         borderColor: "#0066FF",
       }}
     >
-  <Navbar/>
-</Box>
+        <Navbar/>
+      </Box>
     <Box  sx={{
     flexGrow: 1,
     mt: 15,
@@ -64,8 +67,31 @@ export default function BasicGrid() {
             
             </Grid>
           </Box>
+          <Box>
+              <Grid>
+                
+              </Grid>
+            
+          </Box>
 
     <Box>
+
+       <Grid 
+        container 
+        spacing={0}
+        sx={{
+          borderRight: 2,
+          borderLeft: 2,
+           borderBottom: 2,
+          borderColor: "#0066FF",
+          minHeight: '400px',
+          '& > .MuiGrid-item': {
+             padding: '10px',
+          }
+        }}
+      >
+         
+      </Grid>
       
     
       <Grid 
@@ -83,36 +109,104 @@ export default function BasicGrid() {
       >
         
         {/* === COLUMN 1 (5/12) === */}
-        <Grid 
-           size={{xs: 5}}
-          sx={{
-            borderRight: 2,
-            borderColor: "#0066FF",
-          }}
-        >
-          <Typography variant="body1" sx={{ fontWeight: 'bold', p: 2, }}>
-           Vishal Muthappa MCA.,
-          </Typography>
-          <Typography variant="body2" sx={{  p: 1, }}>
-            A front-end developer and UI/UX specialist with a Masters in Computer Applications, I am passionate about
-            crafting seamless digital experiences. My expertise in Next.js, MUI, and Shopify allows me to develop
-            responsive web applications and high-performing eCommerce websites. In my recent work on the PNG
-            National Examination Results website, I leveraged these technologies to improve site performance and
-            enhance user experience across devices. I am committed to creating user-centric designs that drive
-            engagement and satisfaction.
-          </Typography>
-          
-          <Box sx={{ p: 2, }}>
-            <Link href="vishalmuthappa45@gmail.com" color="inherit">
-              {/* This contact is moved to the footer row for accuracy, leaving a plus sign placeholder */}
-              <Typography variant="h4" sx={{ color: '#0066FF', lineHeight: 1 }}>+</Typography>
-            </Link>
-          </Box>
-        </Grid>
+        <Grid
+            size={{ xs: 6 }}
+            sx={{
+              position: "relative",
+              borderRight: 2,
+              borderColor: "#0066FF",
+              color: "#0066FF",
+            }}
+          >
+            {/* TOP LEFT */}
+            <Typography
+              variant="h4"
+              sx={{
+                position: "absolute",
+                top: 8,
+                left: 8,
+                lineHeight: 1,
+                color: "#0066FF",
+              }}
+            >
+              +
+            </Typography>
+
+            {/* TOP RIGHT */}
+            <Typography
+              variant="h4"
+              sx={{
+                position: "absolute",
+                top: 8,
+                right: 8,
+                lineHeight: 1,
+                color: "#0066FF",
+              }}
+            >
+              +
+            </Typography>
+
+            {/* BOTTOM LEFT */}
+            <Typography
+              variant="h4"
+              sx={{
+                position: "absolute",
+                bottom: 8,
+                left: 8,
+                lineHeight: 1,
+                color: "#0066FF",
+              }}
+            >
+              +
+            </Typography>
+
+            {/* BOTTOM RIGHT */}
+            <Typography
+              variant="h4"
+              sx={{
+                position: "absolute",
+                bottom: 8,
+                right: 8,
+                lineHeight: 1,
+                color: "#0066FF",
+              }}
+            >
+              +
+            </Typography>
+
+            {/* CONTENT */}
+            <Box 
+
+            sx={{ p: 3,
+               height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+               }}
+             
+             >
+              <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+                Vishal Muthappa MCA.,
+              </Typography>
+
+              <Typography variant="body2" sx={{ mt: 1 }}>
+                A front-end developer and UI/UX specialist with a Masters in Computer
+                Applications, I am passionate about crafting seamless digital experiences.
+                My expertise in Next.js, MUI, and Shopify allows me to develop responsive
+                web applications and high-performing eCommerce websites. In my recent work
+                on the PNG National Examination Results website, I leveraged these
+                technologies to improve site performance and enhance user experience
+                across devices. I am committed to creating user-centric designs that drive
+                engagement and satisfaction.
+              </Typography>
+            </Box>
+          </Grid>
+
+
         
         {/* === COLUMN 2 (4/12) === */}
         <Grid 
-           size={{xs: 4}} 
+           size={{xs: 6}} 
           sx={{
             borderRight: 2,
             borderColor: "#0066FF",
@@ -133,19 +227,6 @@ export default function BasicGrid() {
           <Link href="#" display="block" color="inherit" underline="none">PHOTO BOOK →</Link>
           <Link href="#" display="block" color="inherit" underline="none">FOLIOSTACK →</Link>
           <Link href="#" display="block" color="inherit" underline="none">LINKBOARD →</Link>
-        </Grid>
-        
-        {/* === COLUMN 3 (3/12) - Right/Empty Space === */}
-        <Grid 
-           size={{xs: 3}}
-          sx={{
-             display: 'flex', 
-             alignItems: 'flex-end', 
-             justifyContent: 'flex-end',
-             paddingBottom: '20px' 
-          }}
-        >
-          <Typography variant="h4" sx={{ color: '#0066FF', lineHeight: 1 }}>+</Typography>
         </Grid>
 
       </Grid>
@@ -195,7 +276,7 @@ export default function BasicGrid() {
           }}
         >
           <Typography variant="body2" sx={{ color: '#0066FF' }}>
-           Logo
+          Web dev
           </Typography>
         </Grid>
 

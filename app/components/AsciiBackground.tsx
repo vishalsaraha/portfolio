@@ -28,7 +28,7 @@ export default function AsciiBackground() {
 
       const cx = canvas.width * 0.65;
       const cy = canvas.height * 0.5;
-      const radius = canvas.width * 0.35;
+      const radius = canvas.width * 0.30;
 
       for (let y = 0; y < canvas.height; y += stepY) {
         for (let x = 0; x < canvas.width; x += stepX) {

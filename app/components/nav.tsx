@@ -6,9 +6,9 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
 const navigation = [
-  { name: 'Skills', href: '#' },
   { name: 'Experience', href: '#' },
   { name: 'Projects', href: '#' },
+  { name: 'Skills', href: '#' },
   { name: 'Connect', href: '#' },
 ]
 
@@ -29,7 +29,7 @@ export default function Navbar() {
                     height={100}/>
             </a>
           </div>
-          <div className="flex lg:hidden">
+          {/* <div className="flex lg:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
@@ -38,7 +38,7 @@ export default function Navbar() {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
-          </div>
+          </div> */}
                    <div className="hidden lg:flex lg:gap-x-4">
                         {navigation.map((item) => (
                           <a
