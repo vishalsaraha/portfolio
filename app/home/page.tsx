@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Image from 'next/image';
 import Navbar from '../components/nav';
 import Midcall from '../components/typewriter';
 import AsciiArt from '../components/Asciiart';
@@ -232,14 +231,14 @@ export default function BasicGrid() {
               Dashboard
             </Link>
           <Link href="#" color="inherit" >ABOUT →</Link>
-          <Link href="#" display="block" color="inherit" underline="none">CONTACT →</Link>
+          <Link href="#" color="inherit" >CONTACT →</Link>
 
           <Typography variant="h6" sx={{ mt: 3, mb: 1, textDecoration: 'underline' }}>
             Interweb
           </Typography>
-          <Link href="#" display="block" color="inherit" underline="none">PHOTO BOOK →</Link>
-          <Link href="#" display="block" color="inherit" underline="none">FOLIOSTACK →</Link>
-          <Link href="#" display="block" color="inherit" underline="none">LINKBOARD →</Link>
+          <Link href="#"  color="inherit" >PHOTO BOOK →</Link>
+          <Link href="#" color="inherit" >FOLIOSTACK →</Link>
+          <Link href="#"  color="inherit">LINKBOARD →</Link>
         </Grid>
 
       </Grid>
