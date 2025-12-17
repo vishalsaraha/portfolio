@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 
-export default function experience(){
+export default function bendo(){
         return(
             <div>
                 <Grid>
