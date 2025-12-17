@@ -74,9 +74,11 @@ export default function AsciiArt() {
   return (
     <Box
       sx={{
-          backgroundColor: "#F8FAFF",
-        color: "#0066FF",
-        overflow: "hidden",
+                      backgroundColor: "#F8FAFF",
+                      color: "#0066FF",
+                      overflow: "hidden",
+                      fontFamily: 'monospace', 
+                      fontSize: '10px', 
         
       }}
     >

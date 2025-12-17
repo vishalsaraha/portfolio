@@ -11,8 +11,6 @@ export default function Midcall() {
           <Box 
             sx={{
               position: 'relative',
-              borderRight: 2,
-              borderColor: "#0066FF",
               
               height: 300,
              
@@ -31,6 +29,7 @@ export default function Midcall() {
               style={{ 
                 display: 'block',
                 alignItems: 'center',
+                 zIndex: 10,
               }} 
             />
             

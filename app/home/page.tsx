@@ -160,7 +160,6 @@ export default function BasicGrid() {
               borderRight: 2,
               borderColor: "#0066FF",
               color: "#0066FF",
-         
             }}
           >
             {/* TOP LEFT */}
@@ -222,11 +221,17 @@ export default function BasicGrid() {
             {/* CONTENT */}
             <Box 
 
-            sx={{ p: 3,
+            sx={{ p: 4,
                height: "100%",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
+                      fontSize: '10px', 
+                      color: '#0066FF', 
+                      mb: 0.5,
+                      textTransform: 'uppercase',
+                      opacity: 0.8,
+                        fontFamily: 'monospace', 
                }}
              
              >
@@ -250,26 +255,85 @@ export default function BasicGrid() {
 
         
         {/* === COLUMN 2 (6/12) === */}
-        <Grid 
-           size={{xs: 6}} 
-        >
-          
-          <Typography variant="h6" sx={{ mb: 1, textDecoration: 'underline' }}>
-            Website
-          </Typography>
-           <Link href="/dashboard" scroll={false}>
-              Dashboard
-            </Link>
-          <Link href="#" color="inherit" >ABOUT →</Link>
-          <Link href="#" color="inherit" >CONTACT →</Link>
+       <Grid 
+            size={{ xs: 6 }} 
+            sx={{
+              backgroundColor: "#0066FF", // Primary blue background
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              p: 5, // Increased padding for a more "Hyve" spacious feel
+              color: "white", 
+              borderRight: 2, // Keeps your grid border consistency
+              borderColor: "#0066FF",
+            }}
+          >
+            {/* SECTION 1: WEBSITE */}
+            <Box sx={{ mb: 6 }}>
+              <Typography 
+                variant="overline" 
+                sx={{ 
+                  border: '1px solid white', 
+                  px: 2, 
+                  py: 0.5,
+                  borderRadius: '4px', // Squared-off technical look
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.1rem',
+                  fontWeight: 'bold',
+                  display: 'inline-block',
+                  mb: 3,
+                  color: 'white'
+                }}
+              >
+                [ WEBSITE_INDEX ]
+              </Typography>
+              
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Link href="/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  DASHBOARD →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  ABOUT →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  CONTACT →
+                </Link>
+              </Box>
+            </Box>
 
-          <Typography variant="h6" sx={{ mt: 3, mb: 1, textDecoration: 'underline' }}>
-            Interweb
-          </Typography>
-          <Link href="#"  color="inherit" >PHOTO BOOK →</Link>
-          <Link href="#" color="inherit" >FOLIOSTACK →</Link>
-          <Link href="#"  color="inherit">LINKBOARD →</Link>
-        </Grid>
+            {/* SECTION 2: INTERWEB */}
+            <Box>
+              <Typography 
+                variant="overline" 
+                sx={{ 
+                  border: '1px solid white', 
+                  px: 2, 
+                  py: 0.5,
+                  borderRadius: '4px', 
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.1rem',
+                  fontWeight: 'bold',
+                  display: 'inline-block',
+                  mb: 3,
+                  color: 'white'
+                }}
+              >
+                [ INTERWEB_RESOURCES ]
+              </Typography>
+
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  PHOTO BOOK →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  FOLIOSTACK →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  LINKBOARD →
+                </Link>
+              </Box>
+            </Box>
+          </Grid>
 
       </Grid>
       
@@ -280,10 +344,7 @@ export default function BasicGrid() {
         container
         spacing={0}
         sx={{
-          borderRight: 2,
-          borderLeft: 2,
-        borderBottom: 2,
-          borderTop: 2, // Line separating the sections
+          border: 2,
           borderColor: "#0066FF",
           minHeight: '60px',
         }}
@@ -296,8 +357,8 @@ export default function BasicGrid() {
                     borderRight: 2,
                     borderColor: "#0066FF",
                     display: 'flex',
-                    flexDirection: 'column', // Stack label and email
-                    alignItems: 'flex-start', // Align left for a clean grid start
+                    flexDirection: 'column', 
+                    alignItems: 'flex-start', 
                     justifyContent: 'center',
                     padding: '16px 20px',
                     backgroundColor: 'transparent',
@@ -314,7 +375,7 @@ export default function BasicGrid() {
                       opacity: 0.8
                     }}
                   >
-                    [ CONTACT_MAILID ]
+                    [ CONTACT_MAIL ID ]
                   </Typography>
 
                   <Link 
@@ -323,10 +384,10 @@ export default function BasicGrid() {
                       variant="body1" 
                       sx={{ 
                         color: '#0066FF', 
-                        fontWeight: 800, // Matching Mike Kus bold style
+                        fontWeight: 800, 
                         fontSize: '0.9rem',
                         lineHeight: 1,
-                        wordBreak: 'break-all' // Ensures it doesn't break your grid on mobile
+                        wordBreak: 'break-all' 
                       }}
                     >
                       VISHALMUTHAPPA45@GMAIL.COM
@@ -341,9 +402,9 @@ export default function BasicGrid() {
                 borderRight: '2px solid #0066FF',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'stretch', // Stretches content to fill the grid cell
+                alignItems: 'stretch', 
                 justifyContent: 'center',
-                padding: '16px 24px', // Professional spacing
+                padding: '16px 24px', 
                 backgroundColor: 'transparent', 
               }}
             >
@@ -402,10 +463,10 @@ export default function BasicGrid() {
                   mt: 2,
                   textAlign: 'right',
                   pt: 1,
-                  borderTop: '1px solid rgba(0, 102, 255, 0.1)' // Very faint internal line
+                  borderTop: '1px solid rgba(0, 102, 255, 0.1)',
                 }}
               >
-                DESIGNED BY VISHAL M // 2025
+                DESIGNED BY VISHAL MUTHAPPA // 2025
               </Typography>
             </Grid>
 
