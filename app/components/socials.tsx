@@ -13,8 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 // 1. Create a styled Grid component
 const StyledGridItem = styled(Grid)(() => ({
   width: '100%',
-  height: '100%',
-  minHeight: '60px',
+  minHeight: '120px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -30,9 +29,11 @@ const StyledGridItem = styled(Grid)(() => ({
 
   '& .social-icon-box': {
     color: '#0066FF',
-    fontSize: '30px',
     transition: 'color 0.25s ease',
   },
+  '& svg': {
+      fontSize: '3rem', 
+    },
 }));
 
 
@@ -45,10 +46,12 @@ export default function Socials(){
               {/* X */}
               <Grid
                 size={{ xs: 3 }}
-                sx={{ borderRight: 2, borderColor: '#0066FF' }}
+                sx={{ borderRight: 2, borderColor: '#0066FF',
+                  fontSize: '3rem',
+                 }}
               >
                 <StyledGridItem>
-                  <Box className="social-icon-box">
+                  <Box className="social-icon-box" >
                     <XIcon />
                     
                   </Box>

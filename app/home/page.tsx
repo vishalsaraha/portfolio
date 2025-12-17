@@ -103,6 +103,39 @@ export default function BasicGrid() {
         </Grid>
       </Box>
 
+      <Box>
+          <Grid 
+          container 
+          spacing={0} 
+          sx={{
+            borderRight: 2,
+            borderLeft: 2,
+            borderBottom: 2,
+            borderColor: "#0066FF",
+            minHeight: '200px',
+            maxHeight: '300px',
+          }}
+        >
+  
+          <Grid 
+           size={{xs: 12}} 
+            sx={{ 
+             
+                width: '100%',
+                height: '100%',
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                p: 0,
+            }}
+          >
+             <Box sx={{ width: '100%', height: '100%' }}>
+           
+             </Box>
+          </Grid>
+        </Grid>
+      </Box>
+
 
     <Box>
      <Grid 
@@ -219,10 +252,6 @@ export default function BasicGrid() {
         {/* === COLUMN 2 (6/12) === */}
         <Grid 
            size={{xs: 6}} 
-          sx={{
-            borderRight: 2,
-            borderColor: "#0066FF",
-          }}
         >
           <Typography variant="h6" sx={{ mb: 1, textDecoration: 'underline' }}>
             Website
@@ -252,6 +281,7 @@ export default function BasicGrid() {
         sx={{
           borderRight: 2,
           borderLeft: 2,
+        borderBottom: 2,
           borderTop: 2, // Line separating the sections
           borderColor: "#0066FF",
           minHeight: '60px',
@@ -260,41 +290,127 @@ export default function BasicGrid() {
         
         {/* FOOTER COLUMN 1: Contact Email */}
         <Grid 
-         size={{ xs: 4 }}
-          
-          sx={{
-            borderRight: 2,
-            borderColor: "#0066FF",
-            display: 'flex',
-            alignItems: 'center',
-            padding: '0 20px',
-          }}
-        >
-           <Link href="vishalmuthappa45@gmail.com" color="inherit">
-              {/* This contact is moved to the footer row for accuracy, leaving a plus sign placeholder */}
-              <Typography variant="body1" sx={{ color: '#0066FF', lineHeight: 1 }}>vishalmuthappa45@gmail.com</Typography>
-            </Link>
-        </Grid>
+                  size={{ xs: 4 }}
+                  sx={{
+                    borderRight: 2,
+                    borderColor: "#0066FF",
+                    display: 'flex',
+                    flexDirection: 'column', // Stack label and email
+                    alignItems: 'flex-start', // Align left for a clean grid start
+                    justifyContent: 'center',
+                    padding: '16px 20px',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  {/* Technical Prefix Label */}
+                  <Typography 
+                    sx={{ 
+                      fontFamily: 'monospace', 
+                      fontSize: '10px', 
+                      color: '#0066FF', 
+                      mb: 0.5,
+                      textTransform: 'uppercase',
+                      opacity: 0.8
+                    }}
+                  >
+                    [ CONTACT_MAILID ]
+                  </Typography>
+
+                  <Link 
+                    href="mailto:vishalmuthappa45@gmail.com" >
+                    <Typography 
+                      variant="body1" 
+                      sx={{ 
+                        color: '#0066FF', 
+                        fontWeight: 800, // Matching Mike Kus bold style
+                        fontSize: '0.9rem',
+                        lineHeight: 1,
+                        wordBreak: 'break-all' // Ensures it doesn't break your grid on mobile
+                      }}
+                    >
+                      VISHALMUTHAPPA45@GMAIL.COM
+                    </Typography>
+                  </Link>
+                </Grid>
 
         {/* FOOTER COLUMN 2: Descriptor Text */}
-        <Grid 
-           size={{ xs: 3 }}
-          sx={{
-            borderRight: 2,
-            borderColor: "#0066FF",
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <Typography variant="body2" sx={{ color: '#0066FF' }}>
-          Web dev
-          </Typography>
-        </Grid>
+            <Grid 
+              size={{ xs: 4 }}
+              sx={{
+                borderRight: '2px solid #0066FF',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'stretch', // Stretches content to fill the grid cell
+                justifyContent: 'center',
+                padding: '16px 24px', // Professional spacing
+                backgroundColor: 'transparent', 
+              }}
+            >
+              {/* Small Technical Label */}
+              <Typography 
+                sx={{ 
+                  fontFamily: 'monospace', 
+                  fontSize: '10px', 
+                  color: '#0066FF', 
+                  mb: 1.5,
+                  textTransform: 'uppercase',
+                  opacity: 0.8
+                }}
+              >
+                Inspiration Ref:
+              </Typography>
+
+              {/* Main Names Row */}
+              <Box sx={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'baseline' 
+              }}>
+                <Typography 
+                  sx={{ 
+                    fontWeight: 900, 
+                    color: '#0066FF', 
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.02em'
+                  }}
+                >
+                  MIKE KUS STUDIO
+                </Typography>
+
+                {/* Minimalist dot/divider */}
+                <Box sx={{ width: '4px', height: '4px', bgcolor: '#0066FF', borderRadius: '50%', opacity: 0.4 }} />
+
+                <Typography 
+                  sx={{ 
+                    fontWeight: 900, 
+                    color: '#0066FF', 
+                    fontSize: '0.9rem',
+                    letterSpacing: '0.02em'
+                  }}
+                >
+                  HYVE SYSTEMS
+                </Typography>
+              </Box>
+
+              {/* Status Footer */}
+              <Typography 
+                sx={{ 
+                  fontFamily: 'monospace', 
+                  fontSize: '9px', 
+                  color: 'rgba(0, 102, 255, 0.5)', 
+                  mt: 2,
+                  textAlign: 'right',
+                  pt: 1,
+                  borderTop: '1px solid rgba(0, 102, 255, 0.1)' // Very faint internal line
+                }}
+              >
+                DESIGNED BY VISHAL M // 2025
+              </Typography>
+            </Grid>
 
         {/* FOOTER COLUMN 3: Social Media Icons (NESTED GRID) */}
         <Grid 
-          size={{ xs: 5 }}
+          size={{ xs: 4 }}
         >
           <Socials/>
         </Grid>
