@@ -4,10 +4,11 @@ import Navbar from '../components/nav';
 import Midcall from '../components/typewriter';
 import AsciiArt from '../components/Asciiart';
 import Socials from '../components/socials';
+import Projectblock from '../projects/projects';
 import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
-
+import data from "../data/projects.json";
 
 
 
@@ -62,7 +63,7 @@ export default function BasicGrid() {
                 </Grid>
                           
               <Grid>
-                {/* <audio src=""></audio> */}
+              
               </Grid>
             
             </Grid>
@@ -104,25 +105,35 @@ export default function BasicGrid() {
       
 
       <Box>
-          <Grid 
-          container 
-          spacing={0} 
-          sx={{
-            borderRight: 2,
-            borderLeft: 2,
-            borderBottom: 2,
-            borderColor: "#0066FF",
-             backgroundColor: "#0066FF",
-            minHeight: '200px',
-            maxHeight: '300px',
-          }}
-        >
-  
-          <Grid>
-            hello
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              borderColor: "#0066FF",
+              backgroundColor: "#0066FF",
+              p: 2,
+              justifyContent: "center",
+            }}
+          >
+            {data.map((item) => (
+              <Grid
+                key={item.id}
+                size={{xs:12, sm:6, md: 4, lg: 3}}
+                display="flex"
+                justifyContent="center"
+              >
+                <Projectblock
+                  title={item.name}
+                  description={item.description}
+                  image={item.image}
+                  link={item.url}
+                  technologies={item.technologies}
+                />
+              </Grid>
+            ))}
           </Grid>
-        </Grid>
-      </Box>
+     </Box>
+
 
       <Box>
         <Grid
@@ -283,7 +294,6 @@ export default function BasicGrid() {
                   border: '1px solid white', 
                   px: 2, 
                   py: 0.5,
-                  borderRadius: '4px', // Squared-off technical look
                   fontSize: '0.7rem',
                   letterSpacing: '0.1rem',
                   fontWeight: 'bold',
@@ -316,7 +326,6 @@ export default function BasicGrid() {
                   border: '1px solid white', 
                   px: 2, 
                   py: 0.5,
-                  borderRadius: '4px', 
                   fontSize: '0.7rem',
                   letterSpacing: '0.1rem',
                   fontWeight: 'bold',
@@ -349,7 +358,6 @@ export default function BasicGrid() {
                   border: '1px solid white', 
                   px: 2, 
                   py: 0.5,
-                  borderRadius: '4px', // Squared-off technical look
                   fontSize: '0.7rem',
                   letterSpacing: '0.1rem',
                   fontWeight: 'bold',
@@ -380,7 +388,6 @@ export default function BasicGrid() {
                   border: '1px solid white', 
                   px: 2, 
                   py: 0.5,
-                  borderRadius: '4px', 
                   fontSize: '0.7rem',
                   letterSpacing: '0.1rem',
                   fontWeight: 'bold',

@@ -44,8 +44,6 @@ export default function HeroAscii() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    stroke: 2,
-                    strokeColor: '#0066FF',
 
                     // GLOW
                     "&::before": {
@@ -64,7 +62,7 @@ export default function HeroAscii() {
                      draggable={false}
                     width={500}
                     height={500}
-                    style={{ position: "relative", zIndex: 1
+                    style={{ position: "relative", zIndex: 1,
                      }}
                 />
                 
