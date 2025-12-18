@@ -67,10 +67,9 @@ export default function BasicGrid() {
             
             </Grid>
           </Box>
-        <Box>
 
             {/* midcall component */}
-
+      <Box>
         <Grid 
           container 
           spacing={0} 
@@ -102,6 +101,7 @@ export default function BasicGrid() {
           </Grid>
         </Grid>
       </Box>
+      
 
       <Box>
           <Grid 
@@ -112,27 +112,33 @@ export default function BasicGrid() {
             borderLeft: 2,
             borderBottom: 2,
             borderColor: "#0066FF",
+             backgroundColor: "#0066FF",
             minHeight: '200px',
             maxHeight: '300px',
           }}
         >
   
-          <Grid 
-           size={{xs: 12}} 
-            sx={{ 
-             
-                width: '100%',
-                height: '100%',
-                display: 'flex', 
-                justifyContent: 'center', 
-                alignItems: 'center', 
-                p: 0,
-            }}
-          >
-             <Box sx={{ width: '100%', height: '100%' }}>
-           
-             </Box>
+          <Grid>
+            hello
           </Grid>
+        </Grid>
+      </Box>
+
+      <Box>
+        <Grid
+          container 
+          spacing={0} 
+          sx={{
+            borderRight: 2,
+            borderLeft: 2,
+            borderBottom: 2,
+            borderColor: "#0066FF",
+            minHeight: '200px',
+            maxHeight: '300px',
+          }}>
+            
+
+
         </Grid>
       </Box>
 
@@ -260,14 +266,15 @@ export default function BasicGrid() {
             sx={{
               backgroundColor: "#0066FF", // Primary blue background
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              p: 5, // Increased padding for a more "Hyve" spacious feel
+              flexDirection: "row",
+              justifyContent: 'space-evenly',
+              p: 5, 
               color: "white", 
               borderRight: 2, // Keeps your grid border consistency
               borderColor: "#0066FF",
             }}
           >
+            <Grid>
             {/* SECTION 1: WEBSITE */}
             <Box sx={{ mb: 6 }}>
               <Typography 
@@ -334,7 +341,71 @@ export default function BasicGrid() {
               </Box>
             </Box>
           </Grid>
+          <Grid>
+           <Box sx={{ mb: 6 }}>
+              <Typography 
+                variant="overline" 
+                sx={{ 
+                  border: '1px solid white', 
+                  px: 2, 
+                  py: 0.5,
+                  borderRadius: '4px', // Squared-off technical look
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.1rem',
+                  fontWeight: 'bold',
+                  display: 'inline-block',
+                  mb: 3,
+                  color: 'white'
+                }}
+              >
+                [ WEBSITE_INDEX ]
+              </Typography>
+              
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Link href="/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  DASHBOARD →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  ABOUT →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  CONTACT →
+                </Link>
+              </Box>
+            </Box>
+              <Box>
+              <Typography 
+                variant="overline" 
+                sx={{ 
+                  border: '1px solid white', 
+                  px: 2, 
+                  py: 0.5,
+                  borderRadius: '4px', 
+                  fontSize: '0.7rem',
+                  letterSpacing: '0.1rem',
+                  fontWeight: 'bold',
+                  display: 'inline-block',
+                  mb: 3,
+                  color: 'white'
+                }}
+              >
+                [ INTERWEB_RESOURCES ]
+              </Typography>
 
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  PHOTO BOOK →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  FOLIOSTACK →
+                </Link>
+                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  LINKBOARD →
+                </Link>
+              </Box>
+            </Box>
+            </Grid>
+      </Grid>
       </Grid>
       
       {/* ------------------------------------- */}
