@@ -31,10 +31,22 @@ export default function Projectblock({
         border: "2px solid #0066FF",
         borderRadius: 0,
         overflow: "hidden",
+        position: "relative",
         "&:hover .overlay": { opacity: 1 },
+        "&:hover img": {
+          transform: "scale(1.07)",
+        },
       }}
     >
-      <Box sx={{ position: "relative", height: "100%",objectFit: "cover" }}>
+      {/* IMAGE CONTAINER */}
+      <Box
+        sx={{
+          position: "relative",
+          width: "100%",
+          height: 300,
+          overflow: "hidden",
+        }}
+      >
         {/* IMAGE */}
         <Box
           component="img"
@@ -71,93 +83,99 @@ export default function Projectblock({
         </Typography>
 
         {/* OVERLAY */}
-          <Box
-            className="overlay"
-            sx={{
+        <Box
+          className="overlay"
+          sx={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 2,
+            opacity: 0,
+            transition: "opacity 0.3s ease",
+            "&::before": {
+              content: '""',
               position: "absolute",
               inset: 0,
-              zIndex: 2,
-              opacity: 0,
-              transition: "opacity 0.3s ease",
-
-              /* background only */
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0, 102, 255, 0.88)",
-              },
-            }}
-          >
-            {/* CONTENT */}
+              backgroundColor: "rgba(0, 102, 255, 0.88)",
+              zIndex: 0,
+            },
+          }}
+        >
+          {/* OVERLAY CONTENT */}
             <Box
               sx={{
-                position: "relative",
+                position: "absolute",
+                inset: 0,
+                zIndex: 1,
                 px: 3,
-                pt: 7,          // ⬅ space below title
                 pb: 3,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
                 color: "#fff",
               }}
             >
-              <Typography
+
+            <Typography
+              sx={{
+                fontFamily: "monospace",
+                fontSize: "0.75rem",
+                lineHeight: 1.7,
+                mb: 2,
+              }}
+            >
+              {description}
+            </Typography>
+
+            {technologies.length > 0 && (
+              <Box
                 sx={{
-                  fontFamily: "monospace",
-                  fontSize: "0.75rem",
-                  lineHeight: 1.7,
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(70px, 1fr))",
+                  gap: 1,
                   mb: 2,
                 }}
               >
-                {description}
-              </Typography>
+                {technologies.map((tech) => (
+                  <Chip
+                    key={tech}
+                    label={tech}
+                    size="small"
+                    sx={{
+                      borderRadius: 0,
+                      border: "1px solid #fff",
+                      color: "#fff",
+                      backgroundColor: "transparent",
+                      fontSize: "0.55rem",
+                      fontFamily: "monospace",
+                      textTransform: "uppercase",
+                    }}
+                  />
+                ))}
+              </Box>
+            )}
 
-              {technologies.length > 0 && (
-                <Box
-                  sx={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(70px, 1fr))",
-                    gap: 1,
-                    mb: 2,
-                  }}
-                >
-                  {technologies.map((tech) => (
-                    <Chip
-                      key={tech}
-                      label={tech}
-                      size="small"
-                      sx={{
-                        borderRadius: 0,
-                        border: "1px solid #fff",
-                        color: "#fff",
-                        backgroundColor: "transparent",
-                        fontSize: "0.55rem",
-                        fontFamily: "monospace",
-                        textTransform: "uppercase",
-                      }}
-                    />
-                  ))}
-                </Box>
-              )}
-
-              <Button
-                href={link}
-                target="_blank"
-                sx={{
-                  fontFamily: "monospace",
-                  color: "#0066FF",
-                  backgroundColor: "#fff",
-                  borderRadius: 0,
-                  px: 2.5,
-                  py: 0.75,
-                  fontSize: "0.6rem",
-                  fontWeight: 800,
-                  letterSpacing: "0.18em",
-                }}
-              >
-                VIEW PROJECT →
-              </Button>
-            </Box>
+            <Button
+              href={link}
+              target="_blank"
+              sx={{
+                fontFamily: "monospace",
+                color: "#0066FF",
+                backgroundColor: "#fff",
+                borderRadius: 0,
+                px: 2.5,
+                py: 0.75,
+                fontSize: "0.6rem",
+                fontWeight: 800,
+                letterSpacing: "0.18em",
+                "&:hover": {
+                  backgroundColor: "#e6f0ff",
+                },
+              }}
+            >
+              VIEW PROJECT →
+            </Button>
           </Box>
-
+        </Box>
       </Box>
     </Card>
   );

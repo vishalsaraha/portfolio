@@ -12,6 +12,7 @@ import data from "../data/projects.json";
 
 
 
+
 export default function BasicGrid() {
   return (
     //blue secondory colour #0066FF
@@ -105,13 +106,14 @@ export default function BasicGrid() {
       
 
       <Box>
+        
           <Grid
             container
             spacing={2}
             sx={{
               borderColor: "#0066FF",
               backgroundColor: "#0066FF",
-              p: 2,
+              p: 3,
               justifyContent: "center",
             }}
           >
