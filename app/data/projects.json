@@ -23,56 +23,8 @@
     "url": "https://github.com/vishalsaraha/attendance-app",
     "image": "/images/attendance-app.png"
   },
-  {
+    {
     "id": 4,
-    "name": "Attendance App",
-    "description": "Face recognition based attendance system",
-    "technologies": ["React", "Next.js", "Node.js", "Express", "MongoDB"],
-    "url": "https://github.com/vishalsaraha/attendance-app",
-    "image": "/images/attendance-app.png"
-  },
-   {
-    "id": 5,
-    "name": "Nammoringa - e commerce",
-    "description": "Face recognition based attendance system",
-    "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],
-    "url": "https://nammoringa.in/",
-    "image": "/images/project/Nammoringa.jpg"
-  },
-     {
-    "id": 6,
-    "name": "Nammoringa - e commerce",
-    "description": "Face recognition based attendance system",
-    "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],
-    "url": "https://nammoringa.in/",
-    "image": "/images/project/Nammoringa.jpg"
-  },
-   {
-    "id": 7,
-    "name": "Yelp Search UI",
-    "description": "MUI autocomplete search with hover suggestions",
-    "technologies": ["React", "Next.js", "MUI"],
-    "url": "https://github.com/vishalsaraha/yelp-search-ui",
-    "image": "/images/yelp-search-ui.png"
-  },
-   {
-    "id": 8,
-    "name": "Yelp Search UI",
-    "description": "MUI autocomplete search with hover suggestions",
-    "technologies": ["React", "Next.js", "MUI"],
-    "url": "https://github.com/vishalsaraha/yelp-search-ui",
-    "image": "/images/yelp-search-ui.png"
-  },
-    {
-    "id": 9,
-    "name": "Nammoringa - e commerce",
-    "description": "Face recognition based attendance system",
-    "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],
-    "url": "https://nammoringa.in/",
-    "image": "/images/project/Nammoringa.jpg"
-  },
-    {
-    "id": 10,
     "name": "Nammoringa - e commerce",
     "description": "Face recognition based attendance system",
     "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],

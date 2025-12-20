@@ -4,11 +4,13 @@ import Navbar from '../components/nav';
 import Midcall from '../components/typewriter';
 import AsciiArt from '../components/Asciiart';
 import Socials from '../components/socials';
+import ExperiencePage from '../pages/experience';
 import Projectblock from '../projects/projects';
 import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import data from "../data/projects.json";
+import { Block } from '@mui/icons-material';
 
 
 
@@ -46,7 +48,9 @@ export default function BasicGrid() {
       }}
       >
       
-        <Grid size={4}>
+        <Grid size={{lg:4}}
+        display={{md:'block'}}
+        >
         <Box 
           sx={{
             position: 'relative', 
@@ -58,7 +62,7 @@ export default function BasicGrid() {
         </Box>
       </Grid>
         
-              <Grid size={8}>
+              <Grid size={{lg: 8, md: 12}}>
                  
                   <HeroAscii />
                 </Grid>
@@ -86,7 +90,7 @@ export default function BasicGrid() {
         >
   
           <Grid 
-           size={{xs: 12}} 
+         size={{lg: 12, md: 12}}
             sx={{ 
              
                 width: '100%',
@@ -146,11 +150,9 @@ export default function BasicGrid() {
             borderLeft: 2,
             borderBottom: 2,
             borderColor: "#0066FF",
-            minHeight: '200px',
-            maxHeight: '300px',
           }}>
             
-
+         <ExperiencePage/>
 
         </Grid>
       </Box>
@@ -173,7 +175,7 @@ export default function BasicGrid() {
         
         {/* === COLUMN 1 (6/12) === */}
         <Grid
-            size={{ xs: 6 }}
+            size={{ lg: 6, md:12 }}
             sx={{
               position: "relative",
               borderRight: 2,
@@ -275,7 +277,7 @@ export default function BasicGrid() {
         
         {/* === COLUMN 2 (6/12) === */}
        <Grid 
-            size={{ xs: 6 }} 
+            size={{ lg: 6, md:12 }} 
             sx={{
               backgroundColor: "#0066FF", // Primary blue background
               display: "flex",
@@ -304,7 +306,7 @@ export default function BasicGrid() {
                   color: 'white'
                 }}
               >
-                [ WEBSITE_INDEX ]
+                [ FRONTEND SKILLS ]
               </Typography>
               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -336,7 +338,7 @@ export default function BasicGrid() {
                   color: 'white'
                 }}
               >
-                [ INTERWEB_RESOURCES ]
+                [ BACKEND SKILLS ]
               </Typography>
 
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -368,7 +370,7 @@ export default function BasicGrid() {
                   color: 'white'
                 }}
               >
-                [ WEBSITE_INDEX ]
+                [ DESIGNING TOOLS ]
               </Typography>
               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -398,7 +400,7 @@ export default function BasicGrid() {
                   color: 'white'
                 }}
               >
-                [ INTERWEB_RESOURCES ]
+                [ DATABASE AND HOSTING ]
               </Typography>
 
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -432,7 +434,7 @@ export default function BasicGrid() {
         
         {/* FOOTER COLUMN 1: Contact Email */}
         <Grid 
-                  size={{ xs: 4 }}
+                  size={{ lg: 4, sm:6 }}
                   sx={{
                     borderRight: 2,
                     borderColor: "#0066FF",
@@ -455,7 +457,7 @@ export default function BasicGrid() {
                       opacity: 0.8
                     }}
                   >
-                    [ CONTACT_MAIL ID ]
+                    [ CONTACT_INFO ]
                   </Typography>
 
                   <Link 
@@ -477,7 +479,7 @@ export default function BasicGrid() {
 
         {/* FOOTER COLUMN 2: Descriptor Text */}
             <Grid 
-              size={{ xs: 4 }}
+              size={{ lg: 4, sm:6 }}
               sx={{
                 borderRight: '2px solid #0066FF',
                 display: 'flex',
@@ -552,7 +554,7 @@ export default function BasicGrid() {
 
         {/* FOOTER COLUMN 3: Social Media Icons (NESTED GRID) */}
         <Grid 
-          size={{ xs: 4 }}
+          size={{ lg: 4 }}
         >
           <Socials/>
         </Grid>

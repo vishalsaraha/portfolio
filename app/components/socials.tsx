@@ -45,7 +45,7 @@ export default function Socials(){
           <Grid container spacing={0}>
               {/* X */}
               <Grid
-                size={{ xs: 3 }}
+                size={{ lg: 3 }}
                 sx={{ borderRight: 2, borderColor: '#0066FF',
                   fontSize: '3rem',
                  }}
@@ -60,7 +60,7 @@ export default function Socials(){
 
               {/* LinkedIn */}
               <Grid
-                size={{ xs: 3 }}
+                size={{ lg: 3 }}
                 sx={{ borderRight: 2, borderColor: '#0066FF' }}
               >
                 <StyledGridItem>
@@ -72,7 +72,7 @@ export default function Socials(){
 
               {/* GitHub */}
               <Grid
-                size={{ xs: 3 }}
+                size={{ lg: 3 }}
                 sx={{ borderRight: 2, borderColor: '#0066FF' }}
               >
                 <StyledGridItem>
