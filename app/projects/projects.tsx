@@ -7,6 +7,14 @@ import {
   Chip,
   Box,
 } from "@mui/material";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register the plugin outside the component
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 type ProjectCardProps = {
   title: string;
@@ -23,8 +31,43 @@ export default function Projectblock({
   link,
   technologies = [],
 }: ProjectCardProps) {
+  // 1. Create a ref for the entire card
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    // 2. Use gsap.context for clean memory management in React
+    const ctx = gsap.context(() => {
+      
+      // The "Pop Up" Animation
+      gsap.fromTo(
+        cardRef.current,
+        {
+          opacity: 0,
+          y: 60,         // Start 60px lower
+          scale: 0.9,    // Start slightly smaller
+        },
+        {
+          opacity: 1,
+          y: 0,          // Move to original position
+          scale: 1,      // Scale to original size
+          duration: 0.8,
+          ease: "power3.out", // Smooth deceleration
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 85%",    // Animation starts when card top hits 85% of viewport
+            toggleActions: "play none none reverse", // Plays forward on enter, reverses on leave
+          },
+        }
+      );
+    }, cardRef); // Scope the selectors to this specific card instance
+
+    // 3. Cleanup: This prevents the "refresh/reload" bugs you were seeing
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Card
+      ref={cardRef}
       sx={{
         width: 360,
         m: 2,
@@ -32,6 +75,7 @@ export default function Projectblock({
         borderRadius: 0,
         overflow: "hidden",
         position: "relative",
+        opacity: 0, // Hidden initially so GSAP can fade it in
         "&:hover .overlay": { opacity: 1 },
         "&:hover img": {
           transform: "scale(1.07)",
@@ -101,20 +145,19 @@ export default function Projectblock({
           }}
         >
           {/* OVERLAY CONTENT */}
-            <Box
-              sx={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 1,
-                px: 3,
-                pb: 3,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                color: "#fff",
-              }}
-            >
-
+          <Box
+            sx={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 1,
+              px: 3,
+              pb: 3,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+              color: "#fff",
+            }}
+          >
             <Typography
               sx={{
                 fontFamily: "monospace",

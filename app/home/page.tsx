@@ -10,7 +10,6 @@ import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import data from "../data/projects.json";
-import { Block } from '@mui/icons-material';
 
 
 
@@ -127,6 +126,7 @@ export default function BasicGrid() {
                 size={{xs:12, sm:6, md: 4, lg: 3}}
                 display="flex"
                 justifyContent="center"
+                
               >
                 <Projectblock
                   title={item.name}
@@ -310,15 +310,15 @@ export default function BasicGrid() {
               </Typography>
               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Link href="/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  DASHBOARD →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  ABOUT →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  CONTACT →
-                </Link>
+                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  DASHBOARD 
+                </Typography>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  ABOUT 
+                </Typography>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  CONTACT 
+                </Typography>
               </Box>
             </Box>
 
@@ -342,15 +342,15 @@ export default function BasicGrid() {
               </Typography>
 
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  PHOTO BOOK →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  FOLIOSTACK →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  LINKBOARD →
-                </Link>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  PHOTO BOOK 
+                </Typography>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  FOLIOSTACK 
+                </Typography>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  ARD 
+                </Typography>
               </Box>
             </Box>
           </Grid>
@@ -374,15 +374,15 @@ export default function BasicGrid() {
               </Typography>
               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Link href="/dashboard" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  DASHBOARD →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  ABOUT →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  CONTACT →
-                </Link>
+                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  DASHBOARD 
+                </Typography>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  ABOUT 
+                </Typography>
+                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  CONTACT 
+                </Typography>
               </Box>
             </Box>
               <Box>
@@ -404,15 +404,15 @@ export default function BasicGrid() {
               </Typography>
 
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  PHOTO BOOK →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  FOLIOSTACK →
-                </Link>
-                <Link href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  LINKBOARD →
-                </Link>
+                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  PHOTO BOOK 
+                </Typography>
+                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  FOLIOSTACK 
+                </Typography>
+                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
+                  KBOARD 
+                </Typography>
               </Box>
             </Box>
             </Grid>
