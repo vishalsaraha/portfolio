@@ -79,23 +79,8 @@ export default function HeroAscii() {
                   >
                   Web developer | cross platform app developer
                   </Typography>
-
-        {/* <Button
-          sx={{
-            width: "fit-content",
-            px: 3,
-            py: 1.2,
-            fontWeight: 600,
-            background: "#ffffff",
-            "&:hover": {
-              background: "#0066FF",
-              color: 'white',
-               
-            },
-          }}
-        >
-          My Resume
-        </Button> */}
+                    
+      
       </Box>
     </Box>
   );

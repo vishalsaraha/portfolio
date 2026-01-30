@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import Navbar from '../components/nav';
 import Midcall from '../components/typewriter';
 import AsciiArt from '../components/Asciiart';
+import BentoCard from '../components/bendo';
 import Socials from '../components/socials';
 import ExperiencePage from '../pages/experience';
 import Projectblock from '../projects/projects';
@@ -66,7 +67,12 @@ export default function BasicGrid() {
                   <HeroAscii />
                 </Grid>
                           
-              <Grid>
+              <Grid sx={{
+                alignItems: 'center',
+                 borderTop: 2,
+            borderColor: "#0066FF",
+              }}>
+                <BentoCard/>
               
               </Grid>
             
