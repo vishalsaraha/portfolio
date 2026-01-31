@@ -126,40 +126,48 @@ export default function BentoLayout() {
         }
       }}
     >
-      <BentoCard 
+     <BentoCard 
         gridArea="feat" 
         title="Featured Project" 
-        description="PNG National Examination Results website: Leveraged Next.js, MUI, and Bootstrap to improve site performance and enhance user experience across devices." 
+        description="Developed the PNG National Exam Result website using Next.js, Material-UI, and Bootstrap. I ensured a responsive and user-friendly interface to enhance site performance and user experience across devices." 
       />
       
       <BentoCard 
         gridArea="side1" 
-        title="Tech Stack" 
-        description="Expertise in Next.js, Material UI, JavaScript, Node.js, and UI/UX Designing to craft seamless digital experiences[cite: 2, 16, 21, 22]." 
+        title="Technical Skills" 
+        description="Core expertise in Next.js, Material UI, JavaScript, Node.js, and Express.js. Skilled in UI/UX designing, Shopify development, and database management with MySQL." 
       />
 
       <BentoCard 
         gridArea="side2" 
         title="Education" 
-        description="Master of Computer Application from Madurai Kamaraj University (2021-2023) and B.Sc in IT & Management[cite: 29, 30, 31, 33]." 
-      />
+        description="Master of Computer Application (MCA)
+          Madurai Kamaraj University
+          2021 - 2023
+          Bachelor of Science (B.Sc) in IT and Management
+          Arul Anandar College
+          2018 - 2021 
+
+          Specialized in crafting digital experiences through a deep understanding of computer applications and management."/>
+
+
 
       <BentoCard 
         gridArea="bot1" 
         title="E-Commerce" 
-        description="Developed and launched Nammoringa.in using Shopify, handling design, customization, and deployment[cite: 14]." 
+        description="Built and launched the Shopify-based eCommerce website, Nammoringa.in. Managed the complete design, customization, and deployment process to ensure a high-performing store." 
       />
       
       <BentoCard 
         gridArea="bot2" 
-        title="Experience" 
-        description="Web Development Intern at Dastin Technologies, focusing on modern front-end frameworks and responsive web applications[cite: 10, 12, 15]." 
+        title="Work Experience" 
+        description="Web Development Intern at Dastin Technologies (10/2024-04/2025). Gained hands-on experience in front-end development using modern frameworks to create seamless digital experiences." 
       />
 
       <BentoCard 
         gridArea="bot3" 
-        title="Projects" 
-        description="Restaurants Order Management System built with Node.js, Express.js, and MySQL[cite: 37, 38]." 
+        title="Full Stack Project" 
+        description="Developed a Restaurants Order Management System featuring a customer food order page, a kitchen display admin dashboard, and automated billing with invoice printing." 
       />
     </Box>
   );
