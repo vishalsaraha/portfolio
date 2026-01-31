@@ -24,7 +24,7 @@ export default function HeroAscii() {
       {/* CONTENT */}
       <Box
         sx={{
-            position: "relative",
+           
             zIndex: 2,
             height: "100%",
             display: "flex",
@@ -44,8 +44,6 @@ export default function HeroAscii() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    stroke: 2,
-                    strokeColor: '#0066FF',
 
                     // GLOW
                     "&::before": {
@@ -54,7 +52,6 @@ export default function HeroAscii() {
                     inset: "-12%",
                     background: "#0066FF",
                     opacity: 0.35,
-                    zIndex: 0,
                     borderRadius: "50%",
                     },
                 }}
@@ -65,37 +62,25 @@ export default function HeroAscii() {
                      draggable={false}
                     width={500}
                     height={500}
-                    style={{ position: "relative", zIndex: 1
+                    style={{ position: "relative", zIndex: 1,
                      }}
                 />
                 
                 </Box>
-        <Typography
-          sx={{
-            maxWidth: 420,
-            opacity: 0.75,
-            fontSize: 14,
-          }}
-        >
-         
-        </Typography>
-
-        {/* <Button
-          variant="contained"
-          sx={{
-            width: "fit-content",
-            borderRadius: "999px",
-            px: 3,
-            py: 1.2,
-            fontWeight: 600,
-            background: "#0066FF",
-            "&:hover": {
-              background: "#0052cc",
-            },
-          }}
-        >
-          Book a consultation
-        </Button> */}
+                <Typography
+                  sx={{ 
+                      fontFamily: 'monospace', 
+                      fontSize: '16px', 
+                      color: '#0066FF', 
+                      backgroundColor: '#f0f4ff',
+                      p: 1,
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                  Web developer | cross platform app developer
+                  </Typography>
+                    
+      
       </Box>
     </Box>
   );

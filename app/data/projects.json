@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Nammoringa - e commerce",
+    "description": "a Shopify based ecommerce platform focused on delivering premium moringa products with a clean and user friendly shopping experience.",
+    "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],
+    "url": "https://nammoringa.in/",
+    "image": "/images/project/Nammoringa.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Attendance App",
+    "description": "Face recognition based attendance system",
+    "technologies": ["React", "Next.js", "Node.js", "Express", "MongoDB"],
+    "url": "https://github.com/vishalsaraha/attendance-app",
+    "image": "/images/attendance-app.png"
+  },
+  {
+    "id": 3,
+    "name": "Attendance App",
+    "description": "Face recognition based attendance system",
+    "technologies": ["React", "Next.js", "Node.js", "Express", "MongoDB"],
+    "url": "https://github.com/vishalsaraha/attendance-app",
+    "image": "/images/attendance-app.png"
+  },
+    {
+    "id": 4,
+    "name": "Nammoringa - e commerce",
+    "description": "Face recognition based attendance system",
+    "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],
+    "url": "https://nammoringa.in/",
+    "image": "/images/project/Nammoringa.jpg"
+  }
+]
