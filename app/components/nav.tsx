@@ -21,24 +21,13 @@ export default function Navbar() {
         <nav aria-label="Global" className="flex items-center justify-between border-2 border-primary p-2 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              
-                <Image
+              <Image
                     src="/images/vishal.png"
                     alt="Logo"
                     width={100} 
                     height={100}/>
             </a>
           </div>
-          {/* <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="size-6" />
-            </button>
-          </div> */}
                    <div className="hidden lg:flex lg:gap-x-4">
                         {navigation.map((item) => (
                           <a

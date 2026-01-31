@@ -26,11 +26,9 @@ const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemP
         transition: "all 0.3s ease-in-out",
         cursor: "pointer",
         backgroundColor: "#fff",
-        // PARENT HOVER LOGIC
         "&:hover": {
           backgroundColor: "#0066FF",
           borderColor: "#0066FF",
-          // This targets every Typography and the Button inside on hover
           "& .MuiTypography-root": { color: "#fff" },
           "& .btn-icon": { color: "#fff" },
           "& .view-btn": { 
@@ -46,7 +44,7 @@ const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemP
             fontFamily: "monospace",
             fontWeight: 800,
             fontSize: "1.1rem",
-            color: "#0066FF", // Default Blue
+            color: "#0066FF",
             textTransform: "uppercase",
             mb: 1,
             transition: "color 0.3s ease"
@@ -58,7 +56,7 @@ const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemP
           sx={{
             fontFamily: "monospace",
             fontSize: "0.85rem",
-            color: "#333", // Default Dark Grey
+            color: "#333",
             lineHeight: 1.6,
             transition: "color 0.3s ease"
           }}
@@ -101,22 +99,22 @@ export default function BentoLayout() {
         display: "grid",
         gap: 2,
         maxWidth: "100%",
-        // minHeight: "100vh",
         mx: "auto",
         gridTemplateColumns: "repeat(4, 1fr)",
         gridTemplateRows: "auto",
+        // 'side2' now spans all three rows on the far right
         gridTemplateAreas: `
           "feat feat side1 side2"
-          "feat feat side1 side3"
-          "bot1 bot2 bot3 side3"
+          "feat feat side1 side2"
+          "bot1 bot2 bot3 side2"
         `,
         "@media (max-width: 900px)": {
           gridTemplateColumns: "repeat(2, 1fr)",
           gridTemplateAreas: `
             "feat feat"
             "side1 side2"
-            "side1 side3"
-            "bot1 bot2"
+            "bot1 side2"
+            "bot2 side2"
             "bot3 bot3"
           `,
         },
@@ -131,43 +129,37 @@ export default function BentoLayout() {
       <BentoCard 
         gridArea="feat" 
         title="Featured Project" 
-        description="This large block acts as the anchor for your grid. It spans two columns and two rows, making it perfect for your most important work." 
+        description="PNG National Examination Results website: Leveraged Next.js, MUI, and Bootstrap to improve site performance and enhance user experience across devices." 
       />
       
       <BentoCard 
         gridArea="side1" 
-        title="Services" 
-        description="A tall vertical block for listing your technical capabilities." 
+        title="Tech Stack" 
+        description="Expertise in Next.js, Material UI, JavaScript, Node.js, and UI/UX Designing to craft seamless digital experiences[cite: 2, 16, 21, 22]." 
       />
 
       <BentoCard 
         gridArea="side2" 
-        title="Contact" 
-        description="Quick links to get in touch." 
-      />
-
-      <BentoCard 
-        gridArea="side3" 
-        title="Experience" 
-        description="A list of companies or years in the industry." 
+        title="Education" 
+        description="Master of Computer Application from Madurai Kamaraj University (2021-2023) and B.Sc in IT & Management[cite: 29, 30, 31, 33]." 
       />
 
       <BentoCard 
         gridArea="bot1" 
-        title="Web3" 
-        description="Blockchain dev." 
+        title="E-Commerce" 
+        description="Developed and launched Nammoringa.in using Shopify, handling design, customization, and deployment[cite: 14]." 
       />
-
+      
       <BentoCard 
         gridArea="bot2" 
-        title="AI/ML" 
-        description="Smart systems." 
+        title="Experience" 
+        description="Web Development Intern at Dastin Technologies, focusing on modern front-end frameworks and responsive web applications[cite: 10, 12, 15]." 
       />
 
       <BentoCard 
         gridArea="bot3" 
-        title="DevOps" 
-        description="CI/CD pipelines." 
+        title="Projects" 
+        description="Restaurants Order Management System built with Node.js, Express.js, and MySQL[cite: 37, 38]." 
       />
     </Box>
   );
