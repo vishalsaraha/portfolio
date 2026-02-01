@@ -48,20 +48,23 @@ export default function BasicGrid() {
       }}
       >
       
-        <Grid size={{lg:4}}
-        display={{md:'block'}}
-        >
-        <Box 
-          sx={{
-            position: 'relative', 
-            borderRight: 2,
-            borderColor: "#0066FF",
-          }}
-        >
-            <AsciiArt/>
-        </Box>
-      </Grid>
-        
+       <Grid 
+            size={{ lg: 4 }}
+            // 'none' hides it on extra-small screens (phones)
+            // 'block' (or 'flex') makes it reappear on medium/large screens
+            display={{ xs: 'none', md: 'block' }} 
+          >
+            <Box 
+              sx={{
+                position: 'relative', 
+                borderRight: 2,
+                borderColor: "#0066FF",
+              }}
+            >
+                <AsciiArt />
+            </Box>
+          </Grid>
+                  
               <Grid size={{lg: 8, md: 12}}>
                  
                   <HeroAscii />
@@ -426,145 +429,101 @@ export default function BasicGrid() {
       </Grid>
       
       {/* ------------------------------------- */}
-      {/* 2. FOOTER ROW (3 COLUMNS / 12 units)  */}
+      {/* 2. FOOTER ROW (STACKS TO 12, THEN ORIGINAL SIZES) */}
       {/* ------------------------------------- */}
+      
       <Grid
         container
         spacing={0}
         sx={{
-          border: 2,
-          borderColor: "#0066FF",
+          border: '2px solid #0066FF',
           minHeight: '60px',
         }}
       >
         
-        {/* FOOTER COLUMN 1: Contact Email */}
+        {/* FOOTER COLUMN 1 */}
         <Grid 
-                  size={{ lg: 4, sm:6 }}
-                  sx={{
-                    borderRight: 2,
-                    borderColor: "#0066FF",
-                    display: 'flex',
-                    flexDirection: 'column', 
-                    alignItems: 'flex-start', 
-                    justifyContent: 'center',
-                    padding: '16px 20px',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  {/* Technical Prefix Label */}
-                  <Typography 
-                    sx={{ 
-                      fontFamily: 'monospace', 
-                      fontSize: '10px', 
-                      color: '#0066FF', 
-                      mb: 0.5,
-                      textTransform: 'uppercase',
-                      opacity: 0.8
-                    }}
-                  >
-                    [ CONTACT_INFO ]
-                  </Typography>
-
-                  <Link 
-                    href="mailto:vishalmuthappa45@gmail.com" >
-                    <Typography 
-                      variant="body1" 
-                      sx={{ 
-                        color: '#0066FF', 
-                        fontWeight: 800, 
-                        fontSize: '0.9rem',
-                        lineHeight: 1,
-                        wordBreak: 'break-all' 
-                      }}
-                    >
-                      VISHALMUTHAPPA45@GMAIL.COM
-                    </Typography>
-                  </Link>
-                </Grid>
-
-        {/* FOOTER COLUMN 2: Descriptor Text */}
-            <Grid 
-              size={{ lg: 4, sm:6 }}
-              sx={{
-                borderRight: '2px solid #0066FF',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'stretch', 
-                justifyContent: 'center',
-                padding: '16px 24px', 
-                backgroundColor: 'transparent', 
-              }}
-            >
-              {/* Small Technical Label */}
-              <Typography 
-                sx={{ 
-                  fontFamily: 'monospace', 
-                  fontSize: '10px', 
-                  color: '#0066FF', 
-                  mb: 1.5,
-                  textTransform: 'uppercase',
-                  opacity: 0.8
-                }}
-              >
-                Inspiration Ref:
-              </Typography>
-
-              {/* Main Names Row */}
-              <Box sx={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'baseline' 
-              }}>
-                <Typography 
-                  sx={{ 
-                    fontWeight: 900, 
-                    color: '#0066FF', 
-                    fontSize: '0.9rem',
-                    letterSpacing: '0.02em'
-                  }}
-                >
-                  MIKE KUS STUDIO
-                </Typography>
-
-                {/* Minimalist dot/divider */}
-                <Box sx={{ width: '4px', height: '4px', bgcolor: '#0066FF', borderRadius: '50%', opacity: 0.4 }} />
-
-                <Typography 
-                  sx={{ 
-                    fontWeight: 900, 
-                    color: '#0066FF', 
-                    fontSize: '0.9rem',
-                    letterSpacing: '0.02em'
-                  }}
-                >
-                  HYVE SYSTEMS
-                </Typography>
-              </Box>
-
-              {/* Status Footer */}
-              <Typography 
-                sx={{ 
-                  fontFamily: 'monospace', 
-                  fontSize: '9px', 
-                  color: 'rgba(0, 102, 255, 0.5)', 
-                  mt: 2,
-                  textAlign: 'right',
-                  pt: 1,
-                  borderTop: '1px solid rgba(0, 102, 255, 0.1)',
-                }}
-              >
-                DESIGNED BY VISHAL MUTHAPPA // 2025
-              </Typography>
-            </Grid>
-
-        {/* FOOTER COLUMN 3: Social Media Icons (NESTED GRID) */}
-        <Grid 
-          size={{ lg: 4 }}
+          /* Stacks at 12 on mobile/tablet, returns to your 2 or 4 on desktop */
+          size={{ xs: 12, md: 12, lg: 4 }} 
+          sx={{
+            borderRight: { xs: 0, lg: '2px solid #0066FF' },
+            borderBottom: { xs: '2px solid #0066FF', lg: 0 },
+            display: 'flex',
+            flexDirection: 'column', 
+            alignItems: 'flex-start', 
+            justifyContent: 'center',
+            padding: '16px 20px',
+            backgroundColor: 'transparent',
+          }}
         >
+          <Typography 
+            sx={{ 
+              fontFamily: 'monospace', fontSize: '10px', color: '#0066FF', mb: 0.5,
+              textTransform: 'uppercase', opacity: 0.8
+            }}
+          >
+            [ CONTACT_INFO ]
+          </Typography>
+
+          <Link href="mailto:vishalmuthappa45@gmail.com">
+            <Typography 
+              variant="body1" 
+              sx={{ color: '#0066FF', fontWeight: 800, fontSize: '0.9rem', lineHeight: 1, wordBreak: 'break-all' }}
+            >
+              VISHALMUTHAPPA45@GMAIL.COM
+            </Typography>
+          </Link>
+        </Grid>
+
+        {/* FOOTER COLUMN 2 */}
+        <Grid 
+          size={{ xs: 12, md: 12, lg: 4 }}
+          sx={{
+            borderRight: { xs: 0, lg: '2px solid #0066FF' },
+            borderBottom: { xs: '2px solid #0066FF', lg: 0 },
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'stretch', 
+            justifyContent: 'center',
+            padding: '16px 24px', 
+            backgroundColor: 'transparent', 
+          }}
+        >
+          <Typography 
+            sx={{ 
+              fontFamily: 'monospace', fontSize: '10px', color: '#0066FF', mb: 1.5,
+              textTransform: 'uppercase', opacity: 0.8
+            }}
+          >
+            Inspiration Ref:
+          </Typography>
+
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+            <Typography sx={{ fontWeight: 900, color: '#0066FF', fontSize: '0.9rem' }}>
+              MIKE KUS STUDIO
+            </Typography>
+            <Box sx={{ width: '4px', height: '4px', bgcolor: '#0066FF', borderRadius: '50%', opacity: 0.4 }} />
+            <Typography sx={{ fontWeight: 900, color: '#0066FF', fontSize: '0.9rem' }}>
+              HYVE SYSTEMS
+            </Typography>
+          </Box>
+
+          <Typography 
+            sx={{ 
+              fontFamily: 'monospace', fontSize: '9px', color: 'rgba(0, 102, 255, 0.5)', 
+              mt: 2, textAlign: 'right', pt: 1, borderTop: '1px solid rgba(0, 102, 255, 0.1)',
+            }}
+          >
+            DESIGNED BY VISHAL MUTHAPPA // 2025
+          </Typography>
+        </Grid>
+
+        {/* FOOTER COLUMN 3 */}
+        <Grid size={{ xs: 12, md: 12, lg: 4 }}>
           <Socials/>
         </Grid>
       </Grid>
+
     </Box>
     </div>
   );
