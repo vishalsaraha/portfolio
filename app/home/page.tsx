@@ -187,7 +187,7 @@ export default function BasicGrid() {
             size={{ lg: 6, md:12 }}
             sx={{
               position: "relative",
-              borderRight: 2,
+          
               borderColor: "#0066FF",
               color: "#0066FF",
             }}

@@ -7,7 +7,7 @@ const experienceData = [
     step: "01",
     role: "Web Development Intern",
     company: "Dastin Technologies",
-    duration: "Oct 2024 – Apr 2025",
+    duration: "Oct 2024 - Apr 2025",
     points: [
       "Developed responsive UI components using Next.js and MUI",
       "Improved page performance through layout optimization",
@@ -31,61 +31,65 @@ const experienceData = [
 
 export default function ExperiencePage() {
   return (
-    /* 🔵 BLUE SECTION */
-    <Box
-      sx={{
-        px: { xs: 2, md: 10 },
-      }}
-    >
-      {/* TITLE */}
+    <Box sx={{ px: { xs: 2, md: 10 }, py: 6 }}>
+      {/* PAGE TITLE */}
       <Typography
+        variant="h5"
         sx={{
-          fontSize: { xs: "2rem", md: "2.8rem" },
-          fontWeight: 800,
-          mb: 10,
-          color: "#fff",
+          fontSize: { xs: "2rem", md: "3rem" },
+          color: "#0066FF",
+          textTransform: "uppercase",
+          letterSpacing: -1,
         }}
       >
-        Experience
+        Work Experience
       </Typography>
 
-      {/* TIMELINE */}
+      {/* TIMELINE DECORATION - Reduced mb from 10 to 3 */}
       <Box
         sx={{
-          mb: 8,
-          height: 2,
-          backgroundColor: "rgba(255,255,255,0.5)",
+          mb: 3, 
+          height: 3,
+          width: "100px",
+          backgroundColor: "#0066FF",
         }}
       />
 
-      {/* ⚪ WHITE BACKGROUND STRIP */}
+      {/* ⚪ WHITE CONTENT AREA */}
       <Box
         sx={{
           backgroundColor: "#fff",
-          px: { xs: 2, md: 6 },
-          py: 6,
+          px: { xs: 3, md: 8 },
+          pt: 4, // Reduced top padding to close the gap
+          pb: 8,
+          borderRadius: "4px",
         }}
       >
-        <Grid container spacing={6}>
+        <Grid container spacing={4}>
           {experienceData.map((item) => (
-            <Grid size={{ xs: 12, md: 4 }} key={item.step}>
+            <Grid size={{ xs: 12, md: 6, lg: 6 }} key={item.step}>
               {/* 🔵 CARD */}
               <Box
                 sx={{
                   backgroundColor: "#0066FF",
                   p: 4,
                   height: "100%",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0px 10px 20px rgba(0,102,255,0.2)",
+                  },
                 }}
               >
-                {/* STEP */}
+                {/* STEP INDICATOR */}
                 <Box
                   sx={{
-                    width: 28,
-                    height: 28,
+                    width: 32,
+                    height: 32,
                     backgroundColor: "#fff",
                     color: "#0066FF",
-                    fontSize: "0.7rem",
-                    fontWeight: 800,
+                    fontSize: "0.75rem",
+                    fontWeight: 900,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -98,7 +102,7 @@ export default function ExperiencePage() {
                 {/* ROLE */}
                 <Typography
                   sx={{
-                    fontSize: "1.2rem",
+                    fontSize: "1.3rem",
                     fontWeight: 800,
                     color: "#fff",
                     mb: 0.5,
@@ -107,26 +111,34 @@ export default function ExperiencePage() {
                   {item.role}
                 </Typography>
 
-                {/* META */}
+                {/* COMPANY & DATE */}
                 <Typography
                   sx={{
-                    fontSize: "0.85rem",
-                    color: "rgba(255,255,255,0.8)",
-                    mb: 2,
+                    fontSize: "0.9rem",
+                    color: "rgba(255,255,255,0.7)",
+                    mb: 3,
+                    fontStyle: "italic",
                   }}
                 >
-                  {item.company} · {item.duration}
+                  {item.company} | {item.duration}
                 </Typography>
 
-                {/* POINTS */}
+                {/* DETAILS */}
                 {item.points.map((point, index) => (
                   <Typography
                     key={index}
                     sx={{
                       fontSize: "0.85rem",
-                      lineHeight: 1.7,
+                      lineHeight: 1.6,
                       color: "#fff",
-                      mb: 1,
+                      mb: 1.5,
+                      display: "flex",
+                      alignItems: "flex-start",
+                      "&::before": {
+                        content: '"•"',
+                        marginRight: "12px",
+                        color: "rgba(255,255,255,0.5)",
+                      },
                     }}
                   >
                     {point}
