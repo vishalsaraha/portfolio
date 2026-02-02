@@ -82,8 +82,8 @@ export default function BasicGrid() {
             </Grid>
           </Box>
 
-            {/* midcall component */}
-      <Box>
+    {/*Typewriter component*/}
+      {/* <Box>
         <Grid 
           container 
           spacing={0} 
@@ -114,7 +114,7 @@ export default function BasicGrid() {
              </Box>
           </Grid>
         </Grid>
-      </Box>
+      </Box> */}
       
 
       <Box>
