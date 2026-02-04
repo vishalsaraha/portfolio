@@ -1,8 +1,7 @@
 "use client";
 
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import AsciiBackground from "./AsciiBackground";
-import Image from "next/image";
 
 export default function HeroAscii() {
   return (
@@ -11,76 +10,58 @@ export default function HeroAscii() {
       sx={{
         position: "relative",
         width: "100%",
-        height: "100%",         
-        minHeight: 400,      
+        height: "100%",
         overflow: "hidden",
         background: "#ffffff",
-         
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      {/* ASCII BACKGROUND */}
       <AsciiBackground />
 
-      {/* CONTENT */}
+      {/* CONTENT BOX */}
       <Box
         sx={{
-           
-            zIndex: 2,
-            height: "100%",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",   
-            textAlign: "center",    
-            px: { xs: 3, md: 6 },
-            color: "#0b0e12",
+          zIndex: 2,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
         }}
       >
-        <Box
-                sx={{
-                    position: "relative",
-                    width: 500,
-                    height: 500,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+        {/* NAME */}
+        <Typography
+          sx={{
+            fontFamily: "'Press Start 2P', system-ui",
+            fontSize: { xs: "1.8rem", md: "3rem" },
+            color: "#ffffff",
+            lineHeight: 1.4,
+            textTransform: "uppercase",
+            mb: 2,
+            // Blue shadow and glow
+            textShadow: "6px 6px 0px #0066FF",
+            filter: "drop-shadow(0px 0px 12px rgba(0, 102, 255, 0.8))",
+          }}
+        >
+          VISHAL MUTHAPPA
+        </Typography>
 
-                    // GLOW
-                    "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    inset: "-12%",
-                    background: "#0066FF",
-                    opacity: 0.35,
-                    borderRadius: "50%",
-                    },
-                }}
-                >
-                <Image
-                    src="/images/home.png"
-                    alt="Web developer's name with some effect"
-                     draggable={false}
-                    width={500}
-                    height={500}
-                    style={{ position: "relative", zIndex: 1,
-                     }}
-                />
-                
-                </Box>
-                <Typography
-                  sx={{ 
-                      fontFamily: 'monospace', 
-                      fontSize: '16px', 
-                      color: '#0066FF', 
-                      backgroundColor: '#f0f4ff',
-                      p: 1,
-                      textTransform: 'uppercase',
-                    }}
-                  >
-                  Web developer | cross platform app developer
-                  </Typography>
-                    
-      
+        {/* SUBTITLE */}
+        <Typography
+          sx={{
+            fontFamily: "monospace",
+            fontSize: "16px",
+            color: "#0066FF",
+            backgroundColor: "#ffffff",
+            p: 1,
+            textTransform: "uppercase",
+            border: "1px solid #0066FF",
+          }}
+        >
+          Web developer | cross platform app developer
+        </Typography>
       </Box>
     </Box>
   );

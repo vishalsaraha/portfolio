@@ -66,6 +66,8 @@ export default function Projectblock({
   }, []);
 
   return (
+    
+    
     <Card
       ref={cardRef}
       sx={{
@@ -75,13 +77,14 @@ export default function Projectblock({
         borderRadius: 0,
         overflow: "hidden",
         position: "relative",
-        opacity: 0, // Hidden initially so GSAP can fade it in
+        opacity: 0, 
         "&:hover .overlay": { opacity: 1 },
         "&:hover img": {
           transform: "scale(1.07)",
         },
       }}
     >
+      
       {/* IMAGE CONTAINER */}
       <Box
         sx={{

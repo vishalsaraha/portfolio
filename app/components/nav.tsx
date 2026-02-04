@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <header className="absolute inset-x-0 z-50 top-0 backdrop-blur-2xl">
+      <header className="absolute inset-x-0 z-50 top-0 backdrop-blur-2xl font-mono">
         <nav aria-label="Global" className="flex items-center justify-between border-2 border-primary p-2 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
@@ -86,13 +86,11 @@ export default function Navbar() {
                   <div className="flex">
                     <Image src="/images/vishal.png" alt="Logo" width={60} height={60} />
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="-m-2.5 rounded-md p-2.5 text-white"
-                  >
-                    <span className="sr-only">Close menu</span>
-                    <XMarkIcon aria-hidden="true" className="h-8 w-8" />
+             
+                    <button
+                      type="button"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
                   </button>
                 </div>
                 

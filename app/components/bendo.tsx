@@ -2,15 +2,29 @@
 
 import { Box, Typography, Button, Paper } from "@mui/material";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 type BentoItemProps = {
   title: string;
   description: string;
+  description2?: string; 
   gridArea: string;
   minHeight?: number | string;
+  downloadHref?: string; 
+  fileName?: string;    
 };
 
-const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemProps) => {
+const BentoCard = ({ 
+  title, 
+  description, 
+  description2, 
+  gridArea, 
+  minHeight = 200, 
+  downloadHref, 
+  fileName 
+}: BentoItemProps) => {
+  const isDownload = Boolean(downloadHref);
+
   return (
     <Paper
       elevation={0}
@@ -34,7 +48,8 @@ const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemP
           "& .view-btn": { 
             color: "#fff", 
             borderColor: "#fff" 
-          }
+          },
+          "& .divider": { borderColor: "rgba(255,255,255,0.3)" }
         },
       }}
     >
@@ -52,23 +67,55 @@ const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemP
         >
           {title}
         </Typography>
+
+        {/* First Description */}
         <Typography
           sx={{
             fontFamily: "monospace",
             fontSize: "0.85rem",
             color: "#333",
             lineHeight: 1.6,
-            transition: "color 0.3s ease"
+            transition: "color 0.3s ease",
+            whiteSpace: "pre-line" // Important for \n breaks
           }}
         >
           {description}
         </Typography>
+
+        {/* Second Description (renders if provided) */}
+        {description2 && (
+          <Box 
+            className="divider"
+            sx={{ 
+              mt: 2, 
+              pt: 2, 
+              borderTop: "1px dashed rgba(0, 102, 255, 0.3)",
+              transition: "border-color 0.3s ease" 
+            }}
+          >
+            <Typography
+              sx={{
+                fontFamily: "monospace",
+                fontSize: "0.85rem",
+                color: "#333",
+                lineHeight: 1.6,
+                transition: "color 0.3s ease",
+                whiteSpace: "pre-line"
+              }}
+            >
+              {description2}
+            </Typography>
+          </Box>
+        )}
       </Box>
 
       <Button
+        component={isDownload ? "a" : "button"}
+        href={downloadHref}
+        download={fileName}
         className="view-btn"
         variant="outlined"
-        endIcon={<ArrowForwardIcon className="btn-icon" />}
+        endIcon={isDownload ? <FileDownloadIcon className="btn-icon" /> : <ArrowForwardIcon className="btn-icon" />}
         sx={{
           alignSelf: "flex-start",
           borderRadius: 0,
@@ -85,7 +132,7 @@ const BentoCard = ({ title, description, gridArea, minHeight = 200 }: BentoItemP
           }
         }}
       >
-        VIEW_DETAIL
+        {isDownload ? "DOWNLOAD" : "VIEW_DETAIL"}
       </Button>
     </Paper>
   );
@@ -102,7 +149,6 @@ export default function BentoLayout() {
         mx: "auto",
         gridTemplateColumns: "repeat(4, 1fr)",
         gridTemplateRows: "auto",
-        // 'side2' now spans all three rows on the far right
         gridTemplateAreas: `
           "feat feat side1 side2"
           "feat feat side1 side2"
@@ -126,7 +172,7 @@ export default function BentoLayout() {
         }
       }}
     >
-     <BentoCard 
+      <BentoCard 
         gridArea="feat" 
         title="Featured Project" 
         description="Developed the PNG National Exam Result website using Next.js, Material-UI, and Bootstrap. I ensured a responsive and user-friendly interface to enhance site performance and user experience across devices." 
@@ -141,21 +187,16 @@ export default function BentoLayout() {
       <BentoCard 
         gridArea="side2" 
         title="Education" 
-        description="Master of Computer Application (MCA)
-          Madurai Kamaraj University
-          2021 - 2023
-          Bachelor of Science (B.Sc) in IT and Management
-          Arul Anandar College
-          2018 - 2021 
-
-          Specialized in crafting digital experiences through a deep understanding of computer applications and management."/>
-
-
+        description={`Master of Computer Application (MCA)\nMadurai Kamaraj University\n2021 - 2023`} 
+        description2={`Bachelor of Science (B.Sc) in IT & Management\nArul Anandar College\n2018 - 2021`}
+      />
 
       <BentoCard 
         gridArea="bot1" 
-        title="E-Commerce" 
-        description="Built and launched the Shopify-based eCommerce website, Nammoringa.in. Managed the complete design, customization, and deployment process to ensure a high-performing store." 
+        title="Download My Resume" 
+        downloadHref="/docs/Vishal_Resue.pdf" 
+        fileName="Vishal_Muthappa_Resume.pdf"
+        description="As a front-end developer and MCA graduate, I specialize in building high-performance applications using Next.js, MUI, and Shopify. Please download my resume to see my full professional history." 
       />
       
       <BentoCard 

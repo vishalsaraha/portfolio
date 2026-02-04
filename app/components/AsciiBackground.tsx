@@ -9,6 +9,7 @@ export default function AsciiBackground() {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
 
+    // Your original settings
     const chars = ["0", "1", ".", ":"];
     const stepX = 10;
     const stepY = 14;
@@ -22,20 +23,13 @@ export default function AsciiBackground() {
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // BLUE ASCII
-      ctx.fillStyle = "rgba(0, 102, 255, 0.50)"; // #0066FF
+      // YOUR ORIGINAL COLOR AND OPACITY
+      ctx.fillStyle = "rgba(0, 102, 255, 0.50)"; 
       ctx.font = "14px monospace";
 
-      const cx = canvas.width * 0.65;
-      const cy = canvas.height * 0.5;
-      const radius = canvas.width * 0.30;
-
+      // Fill the entire screen without checking for a radius/circle
       for (let y = 0; y < canvas.height; y += stepY) {
         for (let x = 0; x < canvas.width; x += stepX) {
-          const dx = x - cx;
-          const dy = y - cy;
-          if (Math.sqrt(dx * dx + dy * dy) < radius) continue;
-
           const char = chars[Math.floor(Math.random() * chars.length)];
           ctx.fillText(char, x, y);
         }

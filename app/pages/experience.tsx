@@ -31,30 +31,11 @@ const experienceData = [
 
 export default function ExperiencePage() {
   return (
-    <Box sx={{ px: { xs: 2, md: 10 }, py: 6 }}>
-      {/* PAGE TITLE */}
-      <Typography
-        variant="h5"
-        sx={{
-          fontSize: { xs: "2rem", md: "3rem" },
-          color: "#0066FF",
-          textTransform: "uppercase",
-          letterSpacing: -1,
-        }}
-      >
-        Work Experience
-      </Typography>
+    <Box sx={{ px: { xs: 2, md: 10 }, py: 6,
+      fontFamily: 'monospace', 
+    }}>
 
-      {/* TIMELINE DECORATION - Reduced mb from 10 to 3 */}
-      <Box
-        sx={{
-          mb: 3, 
-          height: 3,
-          width: "100px",
-          backgroundColor: "#0066FF",
-        }}
-      />
-
+      
       {/* ⚪ WHITE CONTENT AREA */}
       <Box
         sx={{
@@ -63,6 +44,7 @@ export default function ExperiencePage() {
           pt: 4, // Reduced top padding to close the gap
           pb: 8,
           borderRadius: "4px",
+  
         }}
       >
         <Grid container spacing={4}>

@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Navbar from '../components/nav';
-import Midcall from '../components/typewriter';
 import AsciiArt from '../components/Asciiart';
 import BentoCard from '../components/bendo';
 import Socials from '../components/socials';
@@ -118,7 +117,22 @@ export default function BasicGrid() {
       
 
       <Box>
-        
+     {/* PROJECTS SECTION TITLE */}
+     <Box sx={{ backgroundColor: "#0066FF",}}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontSize: { xs: "2rem", md: "3.2rem" },
+            color: "#FFFFFF",
+            textTransform: "uppercase",
+            letterSpacing: -1,
+            display: "inline-block",
+          ml: 5,
+          }}
+        >
+          Projects
+        </Typography>
+      </Box>
           <Grid
             container
             spacing={2}
@@ -151,6 +165,23 @@ export default function BasicGrid() {
 
 
       <Box>
+        {/* PAGE TITLE */}
+      <Box>
+        <Typography
+          variant="h5"
+          sx={{
+            fontSize: { xs: "2rem", md: "3.2rem" },
+            color: "#0066FF",
+            textTransform: "uppercase",
+            letterSpacing: -1,
+            display: "inline-block",
+          ml: 5,
+          
+          }}
+        >
+        Work Experience
+        </Typography>
+      </Box>
         <Grid
           container 
           spacing={0} 
@@ -288,14 +319,15 @@ export default function BasicGrid() {
        <Grid 
             size={{ lg: 6, md:12 }} 
             sx={{
-              backgroundColor: "#0066FF", // Primary blue background
+              backgroundColor: "#0066FF",
               display: "flex",
               flexDirection: "row",
               justifyContent: 'space-evenly',
               p: 5, 
               color: "white", 
-              borderRight: 2, // Keeps your grid border consistency
+              borderRight: 2, 
               borderColor: "#0066FF",
+                fontFamily: 'monospace', 
             }}
           >
             <Grid>
@@ -467,11 +499,13 @@ export default function BasicGrid() {
 
           <Link href="mailto:vishalmuthappa45@gmail.com">
             <Typography 
+            
               variant="body1" 
               sx={{ color: '#0066FF', fontWeight: 800, fontSize: '0.9rem', lineHeight: 1, wordBreak: 'break-all' }}
             >
               VISHALMUTHAPPA45@GMAIL.COM
             </Typography>
+            
           </Link>
         </Grid>
 
