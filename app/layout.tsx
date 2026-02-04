@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Press_Start_2P, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure Press Start 2P (Note: it only supports weight 400)
+const pressStart2P = Press_Start_2P({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-press-start",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Configure a clean Monospace font
+const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
 });
-
-
 
 export const metadata: Metadata = {
   title: "Vishal Muthappa portfolio",
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${pressStart2P.variable} ${jetBrainsMono.variable} antialiased`}
       >
         {children}
       </body>

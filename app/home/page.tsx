@@ -11,6 +11,7 @@ import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import data from "../data/projects.json";
+import { Inter } from 'next/font/google';
 
 
 
