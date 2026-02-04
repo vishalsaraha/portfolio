@@ -26,9 +26,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap');
-
-:root {
-  --font-press-start: 'Press Start 2P', system-ui;
-  --font-roboto-mono: 'Roboto Mono', monospace;
-}
