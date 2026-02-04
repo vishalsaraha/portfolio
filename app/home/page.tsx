@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Navbar from '../components/nav';
 import AsciiArt from '../components/Asciiart';
+import HeroSmall from '../components/smallhero';
 import BentoCard from '../components/bendo';
 import Socials from '../components/socials';
 import ExperiencePage from '../pages/experience';
@@ -64,10 +65,32 @@ export default function BasicGrid() {
             </Box>
           </Grid>
                   
-              <Grid size={{lg: 8, md: 12}}>
-                 
-                  <HeroAscii />
-                </Grid>
+          
+        {/* HERO SECTION WRAPPER */}
+          <Grid container size={{ xs: 12, md: 8, lg: 8 }} sx={{ minHeight: '100%' }}>
+            
+            <Grid
+              size={12}
+              sx={{ 
+                display: { xs: "none", md: "block" },
+                height: "100%",
+                width: "100%" 
+              }}
+            >
+              <HeroAscii />
+            </Grid>
+
+            <Grid 
+              size={12} 
+              sx={{ 
+                display: { xs: "block", md: "none" },
+                width: "100%" 
+              }}
+            >
+              <HeroSmall />
+            </Grid>
+
+          </Grid>
                           
               <Grid sx={{
                 alignItems: 'center',
