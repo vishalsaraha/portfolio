@@ -17,18 +17,18 @@
   },
   {
     "id": 3,
-    "name": "Attendance App",
-    "description": "Face recognition based attendance system",
-    "technologies": ["React", "Next.js", "Node.js", "Express", "MongoDB"],
-    "url": "https://github.com/vishalsaraha/attendance-app",
+    "name": "POS system - Customer app",
+    "description": "A restaurant point of sale system integrates hardware and specialized software to manage the exact moment and order is finalized.",
+    "technologies": ["NodeJs", "Express js", "Javascript", "HTML", "CSS", "MySql"],
+    "url": "https://github.com/vishalsaraha/savoys.git",
     "image": "/images/attendance-app.png"
   },
     {
     "id": 4,
-    "name": "Nammoringa - e commerce",
-    "description": "Face recognition based attendance system",
-    "technologies": ["Shopify", "Javascript", "CSS", "HTML","Shopify liquid"],
-    "url": "https://nammoringa.in/",
+    "name": "Purchase ordering system",
+    "description": "Streamline procurement with automated approval workflows and real-time budget tracking to eliminate overspending.Consolidate vendor management and 3-way invoice matching into one seamless, paperless source of truth.",
+    "technologies": ["Next.js", "Material-UI" , "Typescript" ],
+    "url": "https://github.com/vishalsaraha/po_app.git",
     "image": "/images/project/Nammoringa.jpg"
   }
 ]
