@@ -99,6 +99,16 @@ export default function Navbar() {
                       <span className="text-lg opacity-40">↗</span>
                     </a>
                   ))}
+                  <a
+                    href="https://www.linkedin.com/in/vishal-muthappa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex justify-between items-center py-5 text-2xl font-semibold text-white tracking-tight"
+                  >
+                    Linkedin
+                    <span className="text-lg opacity-40">↗</span>
+                  </a>
                 </div>
               </DialogPanel>
             </div>
