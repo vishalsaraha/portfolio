@@ -11,7 +11,6 @@ import HeroAscii from "../components/HeroAscii";
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import data from "../data/projects.json";
-import { Inter } from 'next/font/google';
 
 
 
@@ -92,15 +91,16 @@ export default function BasicGrid() {
             </Grid>
 
           </Grid>
-                          
-              <Grid sx={{
-                alignItems: 'center',
-                 borderTop: 2,
-            borderColor: "#0066FF",
-              }}>
+                   <Box id="skills" component="section">      
+                    <Grid sx={{
+                      alignItems: 'center',
+                      borderTop: 2,
+                  borderColor: "#0066FF",
+                    }}>
                 <BentoCard/>
               
               </Grid>
+              </Box> 
             
             </Grid>
           </Box>
@@ -140,7 +140,7 @@ export default function BasicGrid() {
       </Box> */}
       
 
-      <Box>
+      <Box id="projects" component="section">
      {/* PROJECTS SECTION TITLE */}
      <Box sx={{ backgroundColor: "#0066FF",}}>
         <Typography
@@ -188,7 +188,7 @@ export default function BasicGrid() {
      </Box>
 
 
-      <Box>
+     <Box id="experience" component="section">
         {/* PAGE TITLE */}
       <Box>
         <Typography
@@ -487,7 +487,7 @@ export default function BasicGrid() {
       {/* ------------------------------------- */}
       {/* 2. FOOTER ROW (STACKS TO 12, THEN ORIGINAL SIZES) */}
       {/* ------------------------------------- */}
-      
+      <Box id="connect" component="section">
       <Grid
         container
         spacing={0}
@@ -581,6 +581,7 @@ export default function BasicGrid() {
           <Socials/>
         </Grid>
       </Grid>
+      </Box>
 
     </Box>
     </div>

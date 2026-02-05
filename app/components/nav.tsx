@@ -5,11 +5,12 @@ import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/re
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
+// 1. Updated hrefs to match section IDs
 const navigation = [
-  { name: 'Experience', href: '#' },
-  { name: 'Projects', href: '#' },
-  { name: 'Skills', href: '#' },
-  { name: 'Connect', href: '#' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Connect', href: '#connect' },
 ]
 
 export default function Navbar() {
@@ -30,7 +31,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Hamburger Menu Trigger */}
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -42,7 +42,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Desktop Navigation - Original Sizes Preserved */}
           <div className="hidden lg:flex lg:gap-x-4">
             {navigation.map((item) => (
               <a
@@ -66,7 +65,6 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* Mobile Toggle Menu */}
         <Transition show={mobileMenuOpen}>
           <Dialog onClose={setMobileMenuOpen} className="relative z-50 lg:hidden">
             <TransitionChild
@@ -83,14 +81,9 @@ export default function Navbar() {
             <div className="fixed inset-0 overflow-y-auto">
               <DialogPanel className="min-h-full w-full flex flex-col p-6">
                 <div className="flex items-center justify-between">
-                  <div className="flex">
-                    <Image src="/images/vishal.png" alt="Logo" width={60} height={60} />
-                  </div>
-             
-                    <button
-                      type="button"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
+                  <Image src="/images/vishal.png" alt="Logo" width={60} height={60} />
+                  <button onClick={() => setMobileMenuOpen(false)} className="text-white">
+                    <XMarkIcon className="h-8 w-8" />
                   </button>
                 </div>
                 
@@ -106,15 +99,6 @@ export default function Navbar() {
                       <span className="text-lg opacity-40">↗</span>
                     </a>
                   ))}
-                  
-                  <a
-                    href="https://www.linkedin.com/in/vishal-muthappa/"
-                    target="_blank"
-                    className="flex justify-between items-center py-5 text-sm font-bold uppercase tracking-[0.2em] text-white/80"
-                  >
-                    Linkedin
-                    <span className="text-xs">↗</span>
-                  </a>
                 </div>
               </DialogPanel>
             </div>
