@@ -340,148 +340,148 @@ export default function BasicGrid() {
 
         
         {/* === COLUMN 2 (6/12) === */}
-       <Grid 
-            size={{ lg: 6, md:12 }} 
-            sx={{
-              backgroundColor: "#0066FF",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: 'space-evenly',
-              p: 5, 
-              color: "white", 
-              borderRight: 2, 
-              borderColor: "#0066FF",
-                fontFamily: 'monospace', 
-            }}
-          >
-            <Grid>
-            {/* SECTION 1: WEBSITE */}
-            <Box sx={{ mb: 6 }}>
-              <Typography 
-                variant="overline" 
-                sx={{ 
-                  border: '1px solid white', 
-                  px: 2, 
-                  py: 0.5,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.1rem',
-                  fontWeight: 'bold',
-                  display: 'inline-block',
-                  mb: 3,
-                  color: 'white'
-                }}
-              >
-                [ FRONTEND SKILLS ]
-              </Typography>
-              
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  DASHBOARD 
-                </Typography>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  ABOUT 
-                </Typography>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  CONTACT 
-                </Typography>
-              </Box>
-            </Box>
+               <Grid 
+                  container 
+                  sx={{
+                    backgroundColor: "#0066FF",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: 'space-evenly',
+                    p: { xs: 3, md: 6, lg: 6 },
+                    color: "white", 
+                    borderRight: { xs: 0, lg: 2 }, 
+                    borderBottom: { xs: 2, lg: 0 }, 
+                    borderColor: "#0066FF",
+                    fontFamily: 'monospace', 
+                    flexGrow: 1
+                  }}
+                >
+                  {/* Left Side Column */}
+                  <Grid size={{ lg: 6, md: 6, xs: 12 }} sx={{ mb: { xs: 6, lg: 0 }, px: { lg: 4 } }}>
+                    {/* SECTION 1: FRONTEND */}
+                    <Box sx={{ mb: { xs: 4, md: 6 } }}>
+                      <Typography 
+                        variant="overline" 
+                        sx={{ 
+                          border: '1px solid white', 
+                          px: 2, 
+                          py: 0.5,
+                          fontSize: { xs: '0.6rem', md: '0.7rem', lg: '0.8rem' }, 
+                          letterSpacing: '0.1rem',
+                          fontWeight: 'bold',
+                          display: 'inline-block',
+                          mb: 3,
+                          color: 'white'
+                        }}
+                      >
+                        [ FRONTEND SKILLS ]
+                      </Typography>
+                      
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, md: 2 } }}>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          NEXT.JS / REACT
+                        </Typography>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          TYPESCRIPT / JS
+                        </Typography>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          GSAP ANIMATION
+                        </Typography>
+                      </Box>
+                    </Box>
 
-            {/* SECTION 2: INTERWEB */}
-            <Box>
-              <Typography 
-                variant="overline" 
-                sx={{ 
-                  border: '1px solid white', 
-                  px: 2, 
-                  py: 0.5,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.1rem',
-                  fontWeight: 'bold',
-                  display: 'inline-block',
-                  mb: 3,
-                  color: 'white'
-                }}
-              >
-                [ BACKEND SKILLS ]
-              </Typography>
+                    {/* SECTION 2: BACKEND */}
+                    <Box>
+                      <Typography 
+                        variant="overline" 
+                        sx={{ 
+                          border: '1px solid white', 
+                          px: 2, 
+                          py: 0.5,
+                          fontSize: { xs: '0.6rem', md: '0.7rem', lg: '0.8rem' },
+                          letterSpacing: '0.1rem',
+                          fontWeight: 'bold',
+                          display: 'inline-block',
+                          mb: 3,
+                          color: 'white'
+                        }}
+                      >
+                        [ BACKEND SKILLS ]
+                      </Typography>
 
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  PHOTO BOOK 
-                </Typography>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  FOLIOSTACK 
-                </Typography>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  ARD 
-                </Typography>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid>
-           <Box sx={{ mb: 6 }}>
-              <Typography 
-                variant="overline" 
-                sx={{ 
-                  border: '1px solid white', 
-                  px: 2, 
-                  py: 0.5,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.1rem',
-                  fontWeight: 'bold',
-                  display: 'inline-block',
-                  mb: 3,
-                  color: 'white'
-                }}
-              >
-                [ DESIGNING TOOLS ]
-              </Typography>
-              
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  DASHBOARD 
-                </Typography>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  ABOUT 
-                </Typography>
-                <Typography  style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  CONTACT 
-                </Typography>
-              </Box>
-            </Box>
-              <Box>
-              <Typography 
-                variant="overline" 
-                sx={{ 
-                  border: '1px solid white', 
-                  px: 2, 
-                  py: 0.5,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.1rem',
-                  fontWeight: 'bold',
-                  display: 'inline-block',
-                  mb: 3,
-                  color: 'white'
-                }}
-              >
-                [ DATABASE AND HOSTING ]
-              </Typography>
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, md: 2 } }}>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          NODE.JS / EXPRESS
+                        </Typography>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          SHOPIFY DEV
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
 
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  PHOTO BOOK 
-                </Typography>
-                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  FOLIOSTACK 
-                </Typography>
-                <Typography style={{ color: 'white', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 700 }}>
-                  KBOARD 
-                </Typography>
-              </Box>
-            </Box>
-            </Grid>
-      </Grid>
+                  {/* Right Side Column */}
+                  <Grid size={{ lg: 6, md: 6, xs: 12 }} sx={{ px: { lg: 4 } }}>
+                    {/* SECTION 3: DESIGNING */}
+                    <Box sx={{ mb: { xs: 4, md: 6 } }}>
+                      <Typography 
+                        variant="overline" 
+                        sx={{ 
+                          border: '1px solid white', 
+                          px: 2, 
+                          py: 0.5,
+                          fontSize: { xs: '0.6rem', md: '0.7rem', lg: '0.8rem' },
+                          letterSpacing: '0.1rem',
+                          fontWeight: 'bold',
+                          display: 'inline-block',
+                          mb: 3,
+                          color: 'white'
+                        }}
+                      >
+                        [ DESIGNING TOOLS ]
+                      </Typography>
+                      
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, md: 2 } }}>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          UI/UX / FIGMA
+                        </Typography>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          PHOTOSHOP
+                        </Typography>
+                      </Box>
+                    </Box>
+
+                    {/* SECTION 4: DATABASE */}
+                    <Box>
+                      <Typography 
+                        variant="overline" 
+                        sx={{ 
+                          border: '1px solid white', 
+                          px: 2, 
+                          py: 0.5,
+                          fontSize: { xs: '0.6rem', md: '0.7rem', lg: '0.8rem' },
+                          letterSpacing: '0.1rem',
+                          fontWeight: 'bold',
+                          display: 'inline-block',
+                          mb: 3,
+                          color: 'white'
+                        }}
+                      >
+                        [ DATABASE AND HOSTING ]
+                      </Typography>
+
+                      <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, md: 2 } }}>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          MONGODB / MYSQL
+                        </Typography>
+                        <Typography style={{ color: 'white', textDecoration: 'none', fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', fontWeight: 700 }}>
+                          CPANEL
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </Grid>
+                </Grid>
+
       </Grid>
       
       {/* ------------------------------------- */}
